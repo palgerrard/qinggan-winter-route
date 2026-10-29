@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青甘小环线 · 冬季版行程单（11/6–11/9）</title>
+<style>
+  :root{
+    --bg:#f6f5f2; --card:#ffffff;
+    --ink:#1c1b19; --ink2:#55524d; --ink3:#8a857e;
+    --line:#e2dfd8; --accent:#b04a22; --accent-soft:#f6ece6;
+    --warn:#8a5a10; --warn-soft:#fbf3e2; --warn-line:#f0e4cd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15px;padding:40px 20px 80px}
+  .wrap{max-width:880px;margin:0 auto}
+
+  .hd{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:30px}
+  .hd h1{font-size:29px;font-weight:700;letter-spacing:-.5px;line-height:1.3}
+  .hd h1 span{color:var(--accent)}
+  .hd .sub{margin-top:9px;color:var(--ink2);font-size:14px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .meta i{font-style:normal;font-size:12.5px;padding:4px 11px;background:var(--card);border:1px solid var(--line);border-radius:4px;color:var(--ink2)}
+
+  /* 顶部开篇 · 营销版头 */
+  .hero{position:relative;overflow:hidden;margin-bottom:28px;padding:26px 26px 20px;
+    background:linear-gradient(135deg,#fdfaf7 0%,#f8efe8 52%,#f3e5da 100%);
+    border:1px solid #e8d6c8;border-radius:10px}
+  .hero:before{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;
+    background:radial-gradient(circle,rgba(176,74,34,.13),rgba(176,74,34,0) 70%)}
+  .hero .kick{position:relative;display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.7px;
+    color:var(--accent);background:#fff;border:1px solid #e3cbba;border-radius:3px;padding:3px 9px 4px}
+  .hero .t{position:relative;font-size:27px;font-weight:700;letter-spacing:-.7px;line-height:1.3;margin:15px 0 0}
+  .hero .t em{font-style:normal;color:var(--accent)}
+  .hero .p{position:relative;margin-top:11px;font-size:13.5px;line-height:1.78;color:#5c5249;max-width:700px}
+  .hero .p + .p{margin-top:8px}
+  .hero .p b{font-weight:700;color:#2b2622}
+  .hero .n{position:relative;display:flex;flex-wrap:wrap;margin-top:18px;padding-top:15px;border-top:1px solid #e6d3c4}
+  .hero .n div{flex:1 1 0;min-width:116px;padding-right:16px}
+  .hero .n b{display:block;font-size:19px;font-weight:700;letter-spacing:-.5px;color:var(--accent);
+    font-variant-numeric:tabular-nums;line-height:1.25}
+  .hero .n span{font-size:11.5px;color:var(--ink3);line-height:1.45;display:block}
+
+  h2{font-size:16px;font-weight:700;margin:36px 0 15px;padding-left:11px;border-left:3px solid var(--accent);line-height:1.2}
+  h2 em{font-style:normal;color:var(--ink3);font-weight:400;font-size:13px;margin-left:8px}
+  h3{font-size:14px;font-weight:700;margin:28px 0 12px;padding-left:9px;border-left:2px solid var(--line);line-height:1.25}
+  h3 em{font-style:normal;color:var(--ink3);font-weight:400;font-size:12.5px;margin-left:7px}
+
+  /* 全程流水图 */
+  .flow{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .fsum{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line);background:#faf9f7}
+  .fsum div{flex:1 1 0;min-width:122px;padding:12px 16px 13px;border-right:1px solid var(--line)}
+  .fsum div:last-child{border-right:none}
+  .fsum b{display:block;font-size:18px;font-weight:700;letter-spacing:-.4px;font-variant-numeric:tabular-nums;line-height:1.25}
+  .fsum span{font-size:11.5px;color:var(--ink3);white-space:nowrap}
+
+  .lane{padding:15px 18px 16px;border-bottom:1px solid var(--line)}
+  .lane:last-child{border-bottom:none}
+  .lane-hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  .lane-hd .no{font-size:10.5px;font-weight:700;letter-spacing:.8px;color:var(--accent);background:var(--accent-soft);padding:2px 7px;border-radius:3px}
+  .lane-hd .tt{font-size:13.5px;font-weight:700}
+  .lane-hd .sm{margin-left:auto;font-size:11.5px;color:var(--ink3);font-variant-numeric:tabular-nums}
+
+  .stops{display:flex;align-items:center;flex-wrap:wrap;row-gap:9px}
+  .st{display:flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid var(--line);border-radius:5px;background:var(--card);flex:0 0 auto}
+  .st .ic{width:15px;height:15px;flex:none;color:#aaa49b;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .st .tx{display:flex;flex-direction:column;gap:1px;min-width:0}
+  .st b{font-size:12px;font-weight:600;line-height:1.4;white-space:nowrap}
+  .st span{font-size:10.5px;color:var(--ink3);line-height:1.4;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .st.slp{border-color:#dfc3b4;background:var(--accent-soft)}
+  .st.slp b{color:var(--accent)}
+  .st.key{border-color:var(--warn-line);background:var(--warn-soft)}
+  .st.key b{color:var(--warn)}
+  .st.mut b{color:var(--ink3);font-weight:500}
+  .st i{font-style:normal;color:var(--accent);font-weight:700}
+  .st.slp .ic{color:var(--accent)}
+  .st.key .ic{color:var(--warn)}
+  .st.mut .ic{color:#c6c1b8}
+  .st.opt{border-style:dashed;border-color:#d7d2c9;background:#fbfaf8}
+  .st.opt b{color:var(--ink3);font-weight:500}
+  .st.opt span{color:#b0aba2}
+  .st.opt .ic{color:#cbc6bd}
+
+  .lk{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 6px;min-width:60px;flex:0 0 auto}
+  .lk::before{content:"";position:absolute;left:2px;right:2px;top:50%;border-top:1px dashed #d9d5cc;z-index:0}
+  .lk span,.lk b{position:relative;z-index:1;background:var(--card);padding:0 4px;line-height:1.35;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .lk span{font-size:10px;color:var(--ink3)}
+  .lk b{font-size:10.5px;font-weight:700;color:var(--ink2)}
+
+  .day{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:15px;overflow:hidden}
+  .day-hd{display:flex;align-items:baseline;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line);background:#faf9f7}
+  .day-hd .no{font-size:11px;font-weight:700;letter-spacing:.8px;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:3px}
+  .day-hd .tt{font-size:15.5px;font-weight:700}
+  .day-hd .dd{margin-left:auto;font-size:12px;color:var(--ink3);text-align:right;line-height:1.5}
+
+  .tl{padding:6px 20px 14px}
+  .row{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:9px 0;border-bottom:1px dashed #eeece6}
+  .row:last-child{border-bottom:none}
+  .row .tm{font-size:13px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:1px}
+  .row .bd{font-size:14px}
+  .row .bd b{font-weight:600}
+  .row .bd .note{display:block;font-size:12.5px;color:var(--ink2);margin-top:3px;line-height:1.6}
+  .row.key{background:var(--warn-soft);margin:0 -20px;padding:11px 20px;border-bottom:1px solid var(--warn-line)}
+  .row.key .tm{color:var(--warn)} .row.key .bd .note{color:var(--warn)}
+  .row.opt{background:#fbfaf8;margin:0 -20px;padding:11px 20px;border-bottom:1px dashed #e6e2da}
+  .row.opt .tm{color:var(--ink3);font-weight:600}
+  .row.opt .bd b{color:var(--ink3);font-weight:600}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;font-size:13.5px}
+  th{background:#faf9f7;font-size:12px;font-weight:600;color:var(--ink2);text-align:left;padding:9px 13px;border-bottom:1px solid var(--line)}
+  td{padding:9px 13px;border-bottom:1px solid #f0eee9;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr.sum td{background:#faf9f7;font-weight:700}
+  .hint{font-size:11.5px;color:var(--ink3);font-weight:400}
+  .lead{font-size:13px;color:var(--ink2);line-height:1.75;margin:0 0 14px}
+  .call + .lead{margin-top:12px}
+  table + .lead{margin-top:14px}
+  .sight{margin:0 0 19px}
+  .sight .sh{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;margin-bottom:4px}
+  .sight .sh b{font-size:13.5px;font-weight:700;color:var(--ink);letter-spacing:.2px}
+  .sight .sh span{font-size:11px;color:var(--ink3);font-variant-numeric:tabular-nums;letter-spacing:.3px}
+  .sight p{margin:0 0 6px;font-size:13px;color:var(--ink2);line-height:1.88}
+  .sight p:last-child{margin-bottom:0}
+  .sight p b{color:var(--ink);font-weight:600}
+  .sight q{quotes:"「" "」";color:var(--ink);font-weight:600;font-style:normal}
+  .fig{margin:0 0 22px;padding:15px 16px 11px;background:var(--card);border:1px solid var(--line);border-radius:6px}
+  .fig svg{display:block;width:100%;height:auto}
+  .fig text{font-family:inherit}
+  .figcap{margin-top:8px;font-size:11.5px;color:var(--ink3);line-height:1.65}
+  .fig.photo{max-width:440px;margin-left:auto;margin-right:auto;padding:10px 10px 6px}
+  .fig.photo.wide{max-width:620px}
+  .fig.photo img + img{margin-top:6px}
+  .fig.photo img{display:block;width:100%;height:auto;border-radius:4px;background:#efeee9}
+  .fig.photo .figcap{padding:0 4px 2px}
+
+  .call{background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:6px;padding:14px 18px;font-size:13.5px;color:var(--warn);line-height:1.75;margin-top:12px}
+  .call b{font-weight:700}
+
+  .ft{margin-top:42px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--ink3);line-height:1.8}
+
+  /* ── 分栏 ── */
+  .tabs{position:sticky;top:0;z-index:30;display:flex;gap:4px;margin:14px 0 0;
+    padding:8px 0 0;background:var(--bg);border-bottom:1px solid var(--line);
+    overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:0 0 auto;appearance:none;background:none;border:none;cursor:pointer;
+    font-family:inherit;font-size:13.5px;font-weight:600;letter-spacing:.2px;color:var(--ink3);
+    padding:7px 13px 10px;line-height:1.3;display:flex;align-items:baseline;gap:6px;
+    border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s,border-color .15s}
+  .tabs button small{font-weight:400;font-size:10.5px;color:#b0aba2;letter-spacing:.2px;white-space:nowrap}
+  .tabs button:hover{color:var(--ink2)}
+  .tabs button:hover small{color:var(--ink3)}
+  .tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+  .tabs button[aria-selected="true"] small{color:#c08a70}
+  .panel{display:none}
+  .panel.on{display:block}
+  .panel{scroll-margin-top:54px}
+  .panel > h2:first-child{margin-top:26px}
+  .panel > .ft{margin-top:34px}
+
+  @media(max-width:640px){
+    body{padding:24px 14px 60px;font-size:14px}
+    .hd h1{font-size:22px}
+    .hero{padding:20px 18px 16px;margin-bottom:22px}
+    .hero .t{font-size:21px;letter-spacing:-.4px}
+    .hero .p{font-size:13px}
+    .hero .n{margin-top:15px;padding-top:13px}
+    .hero .n div{flex:1 1 50%;min-width:0;padding-right:10px;margin-bottom:10px}
+    .hero .n div:nth-child(2n){padding-right:0}
+    .hero .n b{font-size:17px}
+    .fig{overflow-x:auto}
+    .fig svg{min-width:600px}
+    .fsum div{flex:1 1 50%;border-right:none;border-bottom:1px solid var(--line)}
+    .fsum div:nth-child(odd){border-right:1px solid var(--line)}
+    .lane{padding:13px 14px 14px}
+    .lane-hd .sm{margin-left:0;width:100%}
+    .st b{font-size:11.5px}
+    .tabs{margin-top:18px}
+    .tabs button{font-size:13px;padding:7px 10px 9px}
+    .tabs button small{display:none}
+    .row{grid-template-columns:54px 1fr;gap:10px}
+    .day-hd{flex-wrap:wrap}
+    .day-hd .dd{margin-left:0;width:100%;text-align:left}
+    table{font-size:12.5px}
+    th,td{padding:8px 10px}
+  }
+  @media print{
+    @page{margin:14mm 12mm}
+    body{background:#fff;padding:0;font-size:13.5px}
+    .hero{break-inside:avoid}
+    .tabs{display:none}
+    .panel{display:block!important}
+    .day{break-inside:avoid}
+    .lane{break-inside:avoid}
+    .fig{break-inside:avoid}
+    h2,h3{break-after:avoid}
+    tr{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<svg style="display:none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M2 22h20M9.5 6.5h1.5M13 6.5h1.5M9.5 10.5h1.5M13 10.5h1.5M9.5 14.5h1.5M13 14.5h1.5M10.5 22v-3.5h3V22"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.1 7.2a2.2 2.2 0 0 0 3.3-.1 2.2 2.2 0 0 1 3.3.1"/></symbol>
+  <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 1.3 0 1.9-.5 2.5-1"/></symbol>
+  <symbol id="i-landmark" viewBox="0 0 24 24"><path d="m12 2 8 5H4l8-5zM3 22h18M6.5 18v-7M10 18v-7M14 18v-7M17.5 18v-7"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 10.5h16M12 3v7.5M8.5 13.5h.01M15.5 13.5h.01M8 16l-2.5 4M16 16l2.5 4"/></symbol>
+</svg>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kick">冬季限定 · 11/6–11/9 · 8 人成团</span>
+    <div class="t">四天，从<em>雪线</em>开进<em>丹霞</em></div>
+    <p class="p">深圳出发，西宁进出。720 公里环线，一次走完青藏高原与河西走廊的两副面孔：翻过 3790 米的达坂山，站到岗什卡雪峰脚下的连心湖，走完祁连山的 9 号公路，最后在七彩丹霞收尾。</p>
+    <p class="p">十一月的西北，<b>人最少、光最斜、雪线压得最低</b>——这三个「最」，只在冬天成立。夏天来，走的是另一条路。</p>
+    <div class="n">
+      <div><b>4 天 3 晚</b><span>西宁 · 祁连 · 张掖</span></div>
+      <div><b>720 km</b><span>环线全长</span></div>
+      <div><b>3790 m</b><span>最高垭口 · 达坂山</span></div>
+      <div><b>约 ¥2,700</b><span>人均 · 含往返机票</span></div>
+    </div>
+  </div>
+
+  <div class="hd">
+    <h1>青甘小环线 · <span>冬季版行程单</span></h1>
+    <div class="sub">11/6（五）—11/9（一）｜4 天 3 晚｜8 人｜每天 09:00 发车</div>
+    <div class="meta">
+      <i>深圳 → 西宁进</i>
+      <i>张掖动车 → 西宁出</i>
+      <i>岗什卡雪峰</i>
+      <i>祁连山 9 号公路</i>
+      <i>七彩丹霞</i>
+    </div>
+  </div>
+
+  <nav class="tabs" role="tablist" aria-label="行程单分栏">
+    <button type="button" role="tab" data-panel="route" aria-selected="false" aria-controls="route">行程<small>Day1–4 · 时间轴</small></button>
+    <button type="button" role="tab" data-panel="sights" aria-selected="false" aria-controls="sights">看点<small>人文 · 历史 · 地貌</small></button>
+    <button type="button" role="tab" data-panel="logistics" aria-selected="false" aria-controls="logistics">后勤<small>吃 · 包车 · 预算</small></button>
+    <button type="button" role="tab" data-panel="prep" aria-selected="false" aria-controls="prep">准备<small>装备 · 风险 · 待办</small></button>
+  </nav>
+  <section class="panel" id="route" role="tabpanel" aria-label="行程">
+  <h2>全程一览 <em>节点 · 距离 · 行驶 · 停留</em></h2>
+
+  <div class="fig">
+    <svg viewBox="0 0 880 182" role="img" aria-label="全程海拔剖面：西宁 2200 米起，Day2 上达坂山 3790、岗什卡 3700、门源 2900、峨堡 3500，夜宿祁连 2800；Day3 经 9 号公路 3800 下到肃南 2300、张掖 1480；Day4 丹霞 1800 后回西宁 2200">
+      <line x1="26" y1="38" x2="854" y2="38" stroke="#e2dfd8" stroke-width="1" stroke-dasharray="3 4"/>
+      <text x="854" y="32" text-anchor="end" font-size="9.5" fill="#8a857e" letter-spacing=".3">3700 m · 白天活动上限</text>
+
+      <path d="M30,99 L112,35 L194,38 L276,71 L358,46 L440,75 L522,34 L604,95 L686,129 L768,116 L850,99 L850,136 L30,136 Z" fill="#f6ece6"/>
+      <path d="M30,99 L112,35 L194,38 L276,71 L358,46 L440,75 L522,34 L604,95 L686,129 L768,116 L850,99" fill="none" stroke="#b04a22" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <line x1="71" y1="28" x2="71" y2="136" stroke="#e2dfd8" stroke-width="1" stroke-dasharray="3 4"/>
+      <line x1="481" y1="28" x2="481" y2="136" stroke="#e2dfd8" stroke-width="1" stroke-dasharray="3 4"/>
+      <line x1="727" y1="28" x2="727" y2="136" stroke="#e2dfd8" stroke-width="1" stroke-dasharray="3 4"/>
+
+      <circle cx="112" cy="35" r="3.2" fill="#b04a22"/>
+      <circle cx="194" cy="38" r="3.2" fill="#b04a22"/>
+      <circle cx="522" cy="34" r="3.2" fill="#b04a22"/>
+      <circle cx="440" cy="75" r="3.4" fill="#fff" stroke="#b04a22" stroke-width="2"/>
+      <circle cx="686" cy="129" r="3.4" fill="#fff" stroke="#b04a22" stroke-width="2"/>
+
+      <text x="112" y="26" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">达坂山 3790</text>
+      <text x="196" y="28" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">岗什卡 3700</text>
+      <text x="522" y="25" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">9 号公路 3800</text>
+      <text x="446" y="90" font-size="10" fill="#8a857e">夜宿祁连 2800</text>
+      <text x="686" y="152" text-anchor="middle" font-size="10.5" fill="#1c1b19">张掖 1480</text>
+      <text x="768" y="152" text-anchor="middle" font-size="10.5" fill="#1c1b19">丹霞 1800</text>
+      <text x="30" y="152" font-size="10.5" fill="#1c1b19">西宁 2200</text>
+      <text x="850" y="152" text-anchor="end" font-size="10.5" fill="#1c1b19">西宁 2200</text>
+
+      <text x="276" y="172" text-anchor="middle" font-size="9" fill="#8a857e" letter-spacing="1.4">DAY 2</text>
+      <text x="604" y="172" text-anchor="middle" font-size="9" fill="#8a857e" letter-spacing="1.4">DAY 3</text>
+      <text x="788" y="172" text-anchor="middle" font-size="9" fill="#8a857e" letter-spacing="1.4">DAY 4</text>
+    </svg>
+    <div class="figcap">全程海拔剖面。3800 m 以上的两个尖峰都在<b>车里</b>——达坂山是垭口停车 10 分钟，9 号公路是路上翻越，都不在上面走远。真正下地活动的最高点只有岗什卡连心湖 3700 m。</div>
+  </div>
+
+  <div class="flow">
+    <div class="fsum">
+      <div><b>719.6 km</b><span>包车总里程</span></div>
+      <div><b>13 h 31</b><span>在路上（含摆渡）</span></div>
+      <div><b>8 h 47</b><span>飞机 + 动车</span></div>
+      <div><b>3 晚</b><span>西宁 / 祁连 / 张掖</span></div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-hd">
+        <span class="no">DAY 1</span>
+        <span class="tt">深圳 → 西宁</span>
+        <span class="sm">11/6 周五 · 包车 0 km · ZH9235 16:00 起飞 · 落地 19:30</span>
+      </div>
+      <div class="stops">
+        <div class="st"><svg class="ic"><use href="#i-plane"/></svg><div class="tx"><b>深圳宝安 T3</b><span>14:00 集合值机 · <i>16:00 起飞</i></span></div></div>
+        <div class="lk"><span>ZH9235 飞行</span><b>3 h 30</b></div>
+        <div class="st"><svg class="ic"><use href="#i-plane"/></svg><div class="tx"><b>西宁曹家堡</b><span>19:30 落地</span></div></div>
+        <div class="lk"><span>30 km</span><b>40 min</b></div>
+        <div class="st slp"><svg class="ic"><use href="#i-bed"/></svg><div class="tx"><b>市区酒店</b><span>20:10 到 · 住城中</span></div></div>
+        <div class="lk"><span>短驳</span><b>15 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-utensils"/></svg><div class="tx"><b>莫家街夜宵</b><span>21:30</span></div></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-hd">
+        <span class="no">DAY 2</span>
+        <span class="tt">西宁 → 岗什卡 → 门源 → 峨堡 → 祁连</span>
+        <span class="sm">11/7 周六 · 395.5 km · 路上 6 h 53 · 山上 1 h 50</span>
+      </div>
+      <div class="stops">
+        <div class="st"><svg class="ic"><use href="#i-building"/></svg><div class="tx"><b>西宁</b><span>09:00 发车</span></div></div>
+        <div class="lk"><span>110 km</span><b>1 h 40</b></div>
+        <div class="st"><svg class="ic"><use href="#i-camera"/></svg><div class="tx"><b>达坂山</b><span>10:40 · 停 10 min</span></div></div>
+        <div class="lk"><span>55 km</span><b>50 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-snow"/></svg><div class="tx"><b>岗什卡游客中心</b><span>11:45 · 换乘 20 min</span></div></div>
+        <div class="lk"><span>摆渡 7 km</span><b>20 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-waves"/></svg><div class="tx"><b>连心湖</b><span>12:25 · 停 35 min</span></div></div>
+        <div class="lk"><span>徒步 400 m</span><b>—</b></div>
+        <div class="st key"><svg class="ic"><use href="#i-snow"/></svg><div class="tx"><b>七彩瀑布</b><span>13:00 · 往返 55 min</span></div></div>
+        <div class="st opt"><svg class="ic"><use href="#i-snow"/></svg><div class="tx"><b>4123 观峰台</b><span>可选 · 有时间才去</span></div></div>
+        <div class="lk"><span>摆渡</span><b>20 min</b></div>
+        <div class="st mut"><svg class="ic"><use href="#i-snow"/></svg><div class="tx"><b>游客中心</b><span>14:35</span></div></div>
+        <div class="lk"><span>55 km</span><b>60 min</b></div>
+        <div class="st mut"><svg class="ic"><use href="#i-building"/></svg><div class="tx"><b>门源</b><span>15:35 路过</span></div></div>
+        <div class="lk"><span>102.6 km</span><b>81 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-landmark"/></svg><div class="tx"><b>峨堡</b><span>16:56 · 停 10 min</span></div></div>
+        <div class="lk"><span>72.9 km</span><b>77 min</b></div>
+        <div class="st slp"><svg class="ic"><use href="#i-bed"/></svg><div class="tx"><b>祁连县城</b><span>18:23 入住</span></div></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-hd">
+        <span class="no">DAY 3</span>
+        <span class="tt">祁连 → 9 号公路 → 肃南 → 张掖</span>
+        <span class="sm">11/8 周日 · 236.9 km · 路上 4 h 44 · 停拍 2 h 10</span>
+      </div>
+      <div class="stops">
+        <div class="st slp"><svg class="ic"><use href="#i-bed"/></svg><div class="tx"><b>祁连县城</b><span>09:00 出发</span></div></div>
+        <div class="lk"><span>151.3 km</span><b>3 h 12</b></div>
+        <div class="st key"><svg class="ic"><use href="#i-mountain"/></svg><div class="tx"><b>9 号公路</b><span>郭米村起 · 停拍 4–5 次</span></div></div>
+        <div class="lk"><span>全程 5 h 30</span><b>到肃南</b></div>
+        <div class="st"><svg class="ic"><use href="#i-building"/></svg><div class="tx"><b>肃南县城</b><span>14:30 路过</span></div></div>
+        <div class="lk"><span>85.6 km</span><b>92 min</b></div>
+        <div class="st slp"><svg class="ic"><use href="#i-bed"/></svg><div class="tx"><b>张掖市区</b><span>16:02 入住</span></div></div>
+        <div class="st opt"><svg class="ic"><use href="#i-landmark"/></svg><div class="tx"><b>大佛寺</b><span>可选 · 17:30 前</span></div></div>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-hd">
+        <span class="no">DAY 4</span>
+        <span class="tt">七彩丹霞 → 返程</span>
+        <span class="sm">11/9 周一 · 87.2 km · 停留 3 h 45 · ZH9236 20:15 起飞</span>
+      </div>
+      <div class="stops">
+        <div class="st"><svg class="ic"><use href="#i-bed"/></svg><div class="tx"><b>张掖酒店</b><span>08:00 早餐</span></div></div>
+        <div class="lk"><span>37.6 km</span><b>47 min</b></div>
+        <div class="st key"><svg class="ic"><use href="#i-mountain"/></svg><div class="tx"><b>七彩丹霞</b><span>09:17 · 游览 3 h</span></div></div>
+        <div class="lk"><span>37.6 km</span><b>47 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-utensils"/></svg><div class="tx"><b>市区午餐</b><span>13:05 · 45 min</span></div></div>
+        <div class="lk"><span>市区</span><b>10 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-train"/></svg><div class="tx"><b>张掖西站</b><span>14:42 动车</span></div></div>
+        <div class="lk"><span>动车</span><b>2 h 02</b></div>
+        <div class="st"><svg class="ic"><use href="#i-train"/></svg><div class="tx"><b>西宁站</b><span>16:44 到</span></div></div>
+        <div class="lk"><span>30 km</span><b>40 min</b></div>
+        <div class="st"><svg class="ic"><use href="#i-plane"/></svg><div class="tx"><b>曹家堡机场</b><span>18:10 到 · <i>20:15 起飞</i></span></div></div>
+        <div class="lk"><span>ZH9236 飞行</span><b>3 h 15</b></div>
+        <div class="st slp"><svg class="ic"><use href="#i-plane"/></svg><div class="tx"><b>深圳</b><span>23:30 落地</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>逐日行程</h2>
+
+  <div class="day">
+    <div class="day-hd">
+      <span class="no">DAY 1</span>
+      <span class="tt">深圳 → 西宁</span>
+      <span class="dd">11/6 周五<br>住西宁城中</span>
+    </div>
+    <div class="tl">
+      <div class="row"><div class="tm">14:00</div><div class="bd"><b>深圳宝安 T3 集合</b><span class="note">8 人一起值机，行李全部托运——从 Day2 起全程包车，<b>后备箱空间有限，每人控制在 1 件 20 寸 + 1 个背包</b></span></div></div>
+      <div class="row"><div class="tm">16:00</div><div class="bd">ZH9235 · 深圳 → 西宁<span class="note">3 小时 30 分 · 19:30 落地 · 海拔 2200 m，不会有明显反应</span></div></div>
+      <div class="row"><div class="tm">19:30</div><div class="bd">落地 → 市区酒店<span class="note">约 30 km / 40 分钟，<b>20:10 到店</b>。8 人加行李打 2 辆车。<b>住城中（莫家街一带）</b>——Day2 往北经大通上 G227，比住城东少穿一趟城</span></div></div>
+      <div class="row"><div class="tm">21:30</div><div class="bd">夜宵 · 莫家街 / 唐道 637<span class="note">青海土火锅、烤羊肉、甜醅。不喝酒，第一晚睡够</span></div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-hd">
+      <span class="no">DAY 2</span>
+      <span class="tt">西宁 → 岗什卡 → 门源 → 峨堡 → 祁连</span>
+      <span class="dd">11/7 周六 · 实测 395.5 km<br>最高 3790 m（可选 4123）· 住祁连 2800 m</span>
+    </div>
+    <div class="tl">
+      <div class="row key"><div class="tm">09:00</div><div class="bd"><b>西宁出发 · 早饭吃饱，带上干粮</b><span class="note">G227 经大通 → 达坂山隧道 · 约 110 km。<b>今天不吃正餐午饭</b>：出发前买好面包、巧克力、坚果，保温杯灌满热水。岗什卡山上没有任何补给</span></div></div>
+      <div class="row"><div class="tm">10:40</div><div class="bd">达坂山观景台 · 停 10 分钟<span class="note">海拔约 3790 m · 免费停车。全程第一个高点，快拍就走，不跑不跳</span></div></div>
+      <div class="row"><div class="tm">11:45</div><div class="bd">岗什卡游客中心 · 买票换乘<span class="note">摆渡车 ¥25/人往返 · 私家车禁入。停车、扫码、上厕所，8 人实测 20 分钟</span></div></div>
+      <div class="row"><div class="tm">12:05</div><div class="bd">摆渡车上山 → 连心湖<span class="note">7 km / 20 分钟。13:30 停止上山，这个点上车还剩 1 小时 25 分余量</span></div></div>
+      <div class="row"><div class="tm">12:25</div><div class="bd"><b>连心湖 · 拍主峰倒影</b><span class="note">海拔 3700 m · 停 35 分钟。全程出片率最高的机位，先拍合影，后面越走越冷</span></div></div>
+      <div class="row key"><div class="tm">13:00</div><div class="bd"><b>七彩瀑布 · 在这儿吃干粮</b><span class="note">步行单程几百米 · 往返含吃饭 55 分钟。11 月是否结蓝冰取决于当年气温，不作保证</span></div></div>
+      <div class="row opt"><div class="tm">可选</div><div class="bd"><b>4123 观峰台 · 有时间才去</b><span class="note">从七彩瀑布继续上行 2.2 km，往返 4.5 km / 1 小时 45 分。<b>只有全程比计划提前 1 小时 45 分才去得了</b>——真去了，18:23 到不了祁连，会推到 19:50，那天就变成全程夜路。默认不去</span></div></div>
+      <div class="row"><div class="tm">13:55</div><div class="bd">折返 · 回摆渡车站<span class="note">今天山上最高只到 3700 m，高反压力比原计划小很多。摆渡车 18:00 停运，余量充足</span></div></div>
+      <div class="row key"><div class="tm">14:35</div><div class="bd"><b>摆渡车下山 · 返游客中心 · 硬截止</b><span class="note">步行 20 分钟 + 车上 20 分钟。岗什卡总计 2 小时 50 分（11:45–14:35），山上活动 1 小时 50 分。<b>14:35 是今天唯一的硬截止：连心湖少拍 10 分钟也要在这之前上摆渡车</b>——晚 20 分钟，祁连就 18:45 到，最后一段全程摸黑</span></div></div>
+      <div class="row"><div class="tm">15:35</div><div class="bd">过门源浩门镇<span class="note">55 km / 1 小时 · 海拔 2900 m。不进城不停车，这是今天最后一个像样的镇子</span></div></div>
+      <div class="row"><div class="tm">16:56</div><div class="bd"><b>峨堡 · 停 10 分钟</b><span class="note">102.6 km / 81 分钟 · 海拔 3500 m。峨堡古城遗址就在 G227 边上，丝路关隘。<b>Day3 从祁连直接进 9 号公路，不再经过这里，这是全程唯一一次</b></span></div></div>
+      <div class="row key"><div class="tm">18:23</div><div class="bd"><b>抵祁连县城 · 入住</b><span class="note">72.9 km / 77 分钟 · S302 峨祁公路 · 海拔 2800 m。<b>祁连日落 18:14，这段会擦黑约 10 分钟</b>——一级公路、分道行驶、路况良好，但 11 月背阴弯道可能结冰，<b>要求司机 18:40 前到</b></span></div></div>
+      <div class="row"><div class="tm">19:00</div><div class="bd">晚餐 · 祁连县城<span class="note">手抓羊肉、炕锅、牦牛酸奶。今天没吃正餐午饭，晚上吃实在点。早睡——明天 9 号公路是全程主角</span></div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-hd">
+      <span class="no">DAY 3</span>
+      <span class="tt">祁连 → 9 号公路 → 肃南 → 张掖</span>
+      <span class="dd">11/8 周日 · 实测 236.9 km<br>9 号公路留足 5 小时 30 分</span>
+    </div>
+    <div class="tl">
+      <div class="row key"><div class="tm">08:30</div><div class="bd"><b>祁连县城 · 加满油 + 买午饭</b><span class="note">9 号公路 151 km 全程<b>没有加油站、没有饭馆</b>。加满油，再买好包子 / 馍 / 卤肉带上车——县城是唯一补给点</span></div></div>
+      <div class="row"><div class="tm">09:00</div><div class="bd"><b>进 9 号公路 · G213 二尕公路</b><span class="note">祁连至肃南 151.3 km，串 11 种地貌、12 处核心景区。全天主角，纯开 3 小时 12 分</span></div></div>
+      <div class="row"><div class="tm">09:35</div><div class="bd"><b>郭米村 · 第一站</b><span class="note">26 km / 约 33 分钟 · 二尕公路上第一个大村，<b>也是黑河大峡谷的门户</b>——再往前河谷就收窄、两岸对峙。停 15 分钟，村口拍河谷 + 村舍 + 雪山同框</span></div></div>
+      <div class="row"><div class="tm">沿途</div><div class="bd">黑河大峡谷 · 祁连鹿场 · 野牛沟 · 祁连山草原<span class="note">一路走一路停，<b>除郭米村外还有 3–4 个停车点，每处 20–25 分钟</b>。背阴路段白天化、夜里冻。只停停车湾，路边停车罚 200 记 3 分。出发前跟司机定好停车点</span></div></div>
+      <div class="row"><div class="tm">12:00</div><div class="bd">黑河大峡谷一带 · 车上吃午饭<span class="note">带的东西这时候派上用场。这一带没有餐馆，最近的补给点是野牛沟乡的简易面馆</span></div></div>
+      <div class="row key"><div class="tm">14:30</div><div class="bd"><b>抵肃南县城</b><span class="note">151.3 km，纯开 192 分钟 + 停拍约 130 分钟 = 5 小时 30 分。不进城，直接过</span></div></div>
+      <div class="row"><div class="tm">16:02</div><div class="bd"><b>抵张掖 · 住大佛寺附近</b><span class="note">85.6 km / 92 分钟 · S313 张肃一级公路，全路段好走。张掖日落 18:11，<b>16:00 就到了，天还大亮</b></span></div></div>
+      <div class="row opt"><div class="tm">16:35</div><div class="bd"><b>大佛寺 · 可选，有时间再去</b><span class="note">酒店步行 5 分钟 · ¥40 · 淡季 17:30 停止入园，<b>16:35 进去还有 55 分钟</b>，够看大佛殿那尊 34.5 米木胎泥塑卧佛，和卧佛身后那幅 4.4 米的<b>西游记壁画</b>（画里的猪八戒是全队最勤快的那个，跟小说里正好相反）。<b>9 号公路停拍多了、超过 16:30 才到张掖，就直接放弃</b>——Day4 早上不补，改睡到 8 点</span></div></div>
+      <div class="row"><div class="tm">18:00</div><div class="bd">晚餐 · 甘州市场<span class="note">搓鱼面、牛肉小饭、炒炮仗、临泽小枣。住大佛寺附近走过去就到</span></div></div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="day-hd">
+      <span class="no">DAY 4</span>
+      <span class="tt">七彩丹霞 → 张掖西 → 西宁 → 深圳</span>
+      <span class="dd">11/9 周一 · 08:30 出发<br>丹霞整 3 小时 · 14:42 动车</span>
+    </div>
+    <div class="tl">
+      <div class="row"><div class="tm">08:00</div><div class="bd">早餐 · 酒店<span class="note">最后一天，早点吃。行李前一晚收拾好，今天直接放车上，不用回房间</span></div></div>
+      <div class="row"><div class="tm">08:30</div><div class="bd">出发 · 张掖 → 七彩丹霞<span class="note">37.6 km / 47 分钟 · 09:17 到北门。票提前线上买好，现场只刷身份证</span></div></div>
+      <div class="row"><div class="tm">09:17</div><div class="bd"><b>七彩丹霞 · 游览整 3 小时</b><span class="note">¥108 含观光车 · 单向环线：北门 → 云海台 → 仙缘台 → 土林谷 → 虹霞台 → 北门。4 个台每台给 25 分钟（共 1 小时 40 分），剩下 1 小时 20 分全给 4 次等车和拍照——够慢慢拍</span></div></div>
+      <div class="row key"><div class="tm">12:17</div><div class="bd"><b>必须出景区</b><span class="note">4 个台各 25 分钟，4 次等车每次 8–10 分钟，<b>3 小时是刚性时间</b>。想出园再晚，午餐和取行李就得一路赶</span></div></div>
+      <div class="row"><div class="tm">13:05</div><div class="bd">回市区午餐<span class="note">47 分钟车程 · 用餐 45 分钟。在市区吃，别在景区门口</span></div></div>
+      <div class="row"><div class="tm">13:50</div><div class="bd">取行李 · 前往张掖西站<span class="note">车站就在市区西南，往丹霞同方向，不绕路</span></div></div>
+      <div class="row key"><div class="tm">14:42</div><div class="bd"><b>D2674 · 张掖西 → 西宁</b><span class="note">2 小时 2 分 · 297 km · 16:44 到 · 二等座 ¥91.5。<b>前半小时爬到山丹马场 3108 m（全球海拔最高的高铁站），再穿 7 座隧道出到门源——这一段别睡</b>。别买 16:25 那班，到西宁 18:25 赶不上</span></div></div>
+      <div class="row"><div class="tm">17:30</div><div class="bd">西宁站 → 曹家堡机场<span class="note">约 30 km / 40 分钟。8 人 2 辆车刚好，别等机场大巴</span></div></div>
+      <div class="row"><div class="tm">20:15</div><div class="bd">ZH9236 · 西宁 → 深圳<span class="note">3 小时 15 分 · 23:30 落地。到家接近凌晨 1 点，周一建议请整天假</span></div></div>
+    </div>
+  </div>
+
+  <h2>关键里程 <em>腾讯地图驾车实测</em></h2>
+  <p class="lead">下面这些数字是腾讯地图按 11 月路况算的驾车距离和耗时，可以拿去跟司机对账。</p>
+  <table>
+    <tr><th>路段</th><th class="num" style="width:92px">距离</th><th class="num" style="width:88px">车程</th></tr>
+    <tr><td>西宁 → 达坂山 → 青石嘴 → 岗什卡游客中心</td><td class="num">约 165 km</td><td class="num">约 2 小时 35 分</td></tr>
+    <tr><td>岗什卡 → 门源浩门镇</td><td class="num">55 km</td><td class="num">60 分钟</td></tr>
+    <tr><td>门源浩门镇 → 峨堡镇</td><td class="num">102.6 km</td><td class="num">81 分钟</td></tr>
+    <tr><td>峨堡镇 → 祁连县城</td><td class="num">72.9 km</td><td class="num">77 分钟</td></tr>
+    <tr><td>祁连县城 → 肃南县城（9 号公路）<br><span class="hint">其中：县城 → 郭米村约 25 km / 33 分钟；野牛沟乡在 82 km 处</span></td><td class="num">151.3 km</td><td class="num">192 分钟</td></tr>
+    <tr><td>肃南县城 → 张掖市区</td><td class="num">85.6 km</td><td class="num">92 分钟</td></tr>
+    <tr><td><span class="hint">封路备选：</span>峨堡镇 → 扁都口（G0611 高速）</td><td class="num">约 27 km</td><td class="num">约 20 分钟</td></tr>
+    <tr><td><span class="hint">封路备选：</span>扁都口 → 民乐县城</td><td class="num">48.7 km</td><td class="num">63 分钟</td></tr>
+    <tr><td><span class="hint">封路备选：</span>民乐县城 → 马蹄寺</td><td class="num">44.1 km</td><td class="num">47 分钟</td></tr>
+    <tr><td><span class="hint">封路备选：</span>马蹄寺 → 张掖市区</td><td class="num">58.3 km</td><td class="num">63 分钟</td></tr>
+    <tr><td>张掖市区 → 七彩丹霞</td><td class="num">37.6 km</td><td class="num">47 分钟</td></tr>
+    <tr><td>张掖市区 → 张掖西站</td><td class="num">约 12 km</td><td class="num">约 20 分钟</td></tr>
+  </table>
+
+  <h2>11 月天色 <em>行程按此倒排</em></h2>
+  <table>
+    <tr><th class="num" style="width:96px">日期</th><th>地点</th><th class="num">日出</th><th class="num">日落</th></tr>
+    <tr><td class="num">11/7 周六</td><td>门源 → 祁连</td><td class="num">07:51</td><td class="num">18:14</td></tr>
+    <tr><td class="num">11/8 周日</td><td>肃南</td><td class="num">07:58</td><td class="num">18:18</td></tr>
+    <tr><td class="num">11/8 周日</td><td>张掖市区</td><td class="num">07:53</td><td class="num">18:11</td></tr>
+    <tr><td class="num">11/9 周一</td><td>张掖 / 七彩丹霞</td><td class="num">07:54</td><td class="num">18:10–18:13</td></tr>
+  </table>
+  <div class="call">
+    全线按<b>「17:30 前离开山路」</b>倒排，距日落留 40–48 分钟缓冲。11 月这一带最高温 10–12℃，最低 -3 至 -9℃，<b>早上九点出发时路面可能还有薄冰</b>，车玻璃会结霜，比天黑更值得提醒司机。
+  </div>
+
+  <h2>如遇封路 <em>两个决策点，别赌</em></h2>
+  <table>
+    <tr><th style="width:150px">场景</th><th>走法</th><th class="num" style="width:110px">结果</th></tr>
+    <tr><td><b>Day2 傍晚</b><br>峨堡 → 祁连<br>（S302 峨祁公路）</td><td>若垭口结冰或管制，<b>就地退回门源浩门镇住</b>（18:00 到门源，天还亮）。Day3 从门源补走峨堡 → 祁连，再进 9 号公路</td><td class="num">Day3 多 175 km<br>9 号公路只剩 3 h</td></tr>
+    <tr><td><b>Day3 早上</b><br>9 号公路<br>（G213 二尕公路）</td><td>若封路或暗冰严重，<b>S302 峨堡 → G0611 扁门高速 → 扁都口 → 民乐 → 马蹄寺 → 张掖</b></td><td class="num">251 km<br>12:27 到马蹄寺<br>16:30 到张掖</td></tr>
+    <tr><td>一切正常</td><td>祁连 → G213 二尕公路 → 肃南 → 张掖</td><td class="num">16:02</td></tr>
+  </table>
+  <div class="call">
+    <b>Day3 的决策必须在祁连县城（08:30 加油时）做，不能开进二尕公路几十公里再回头。</b>9 号公路是这趟的主角，只有真封路或严重结冰才启用扁都口——那是止损，不是选项。出发前一晚和当天早上各查一次路况。
+  </div>
+  <div class="call">
+    <b>走扁都口别照着 G227 走，那段国道现在全封。</b>G227 扁都口至峨堡镇（K93+205–K125+925）<b>2026 年 9 月 1 日至 2027 年 6 月 30 日全幅封闭施工</b>，小客车也不放行。要过扁都口只有一条路：<b>S302 到峨堡收费站，上 G0611 扁门高速，20 分钟穿过扁都口</b>。副作用是车流全压到 S302 上，峨堡到祁连这段大车多、夜间通行量大——Day2 傍晚那一程格外留神。
+  </div>
+
+  <h3>封路那天怎么走 <em>顺路把马蹄寺捡回来</em></h3>
+  <p class="lead">走扁都口这条线有个便宜可占：从民乐拐到马蹄寺只有 44 km，马蹄寺到张掖 58 km，合计 102 km；而民乐直放张掖是 65 km。<b>等于只多绕 37 km、50 分钟，就把马蹄寺看了</b>，还不用从张掖折返。</p>
+  <table>
+    <tr><th style="width:74px">时间</th><th>节点</th><th class="num" style="width:126px">里程 / 车程</th></tr>
+    <tr><td class="num">09:00</td><td>祁连县城出发 · S302 往峨堡<span class="hint">　跟主计划同一时间发车，不提前</span></td><td class="num">—</td></tr>
+    <tr><td class="num">10:17</td><td>峨堡收费站 · 上 G0611 扁门高速</td><td class="num">72.9 km / 77 min</td></tr>
+    <tr><td class="num">10:37</td><td>扁都口 · 高速穿过去，转 G227 往北</td><td class="num">27 km / 20 min</td></tr>
+    <tr><td class="num">11:40</td><td>民乐县城 · 不进县城，往西北拐</td><td class="num">48.7 km / 63 min</td></tr>
+    <tr><td class="num">12:27</td><td><b>马蹄寺 · 游览 3 小时</b></td><td class="num">44.1 km / 47 min</td></tr>
+    <tr><td class="num">15:27</td><td>出发去张掖</td><td class="num">58.3 km / 63 min</td></tr>
+    <tr><td class="num">16:30</td><td>张掖酒店入住 · 行李放下</td><td class="num">—</td></tr>
+    <tr><td class="num">16:50</td><td>大佛寺（可选，还有 40 分钟）</td><td class="num">步行 5 min</td></tr>
+    <tr><td class="num">18:00</td><td>甘州市场晚餐</td><td class="num">—</td></tr>
+  </table>
+  <p class="lead"><b>合计 251 km、纯车程 4 小时 30 分</b>——比走 9 号公路多 14 km，车程反倒少 14 分钟（原路 236.9 km / 4 小时 44 分）。省下的时间全给马蹄寺，不是省下来休息。</p>
+  <table>
+    <tr><th style="width:104px">马蹄寺</th><th>须知</th></tr>
+    <tr><td><b>淡季时间</b></td><td>08:30–18:00，<b>16:30 停止入园</b>。11/8 是淡季，按这个时间算</td></tr>
+    <tr><td><b>门票</b></td><td>大景区 ¥87 含观光车（千佛洞 + 北寺 + 三十三天石窟 + 格萨尔王殿）。8 人 ¥696，封路当天现场买就行，不提前订</td></tr>
+    <tr><td><b>要爬</b></td><td>三十三天石窟 7 层 21 窟嵌在绝壁，<b>阶梯接近 90°，要抓铁链上</b>。穿防滑鞋、带手电（窟内没照明），海拔 2500 m，爬慢一点</td></tr>
+    <tr><td><b>够不够</b></td><td>3 小时够。观光车到千佛洞 → 三十三天 → 格萨尔王殿，一圈下来 2 小时 20 分，剩 40 分钟拍照和等人</td></tr>
+  </table>
+  <div class="call">
+    <b>最坏情况：9 号公路封、扁门高速也管制，那就是真没路了。</b>祁连回张掖的小客车只有这两条通道，硬走要绕到西宁、武威、山丹，800 km 以上，当天到不了。这种时候别硬赶——<b>原路退回门源住一晚</b>，Day4 从门源走 G0611 直接回西宁赶 20:15 的飞机（门源 → 西宁约 1 小时 50 分），放弃张掖和丹霞。这是唯一不会误机的解法。
+  </div>
+
+  <h2>路线方向 <em>为什么不能反着走</em></h2>
+  <p class="lead">机票定死在西宁进、西宁出，中间坐一次动车。动车搁在哪一天，决定了这趟是「两头松」还是「末段赌」。</p>
+  <table>
+    <tr><th style="width:104px"></th><th>现在这样　西宁进 → 张掖出</th><th>反过来　张掖进 → 西宁出</th></tr>
+    <tr><td><b>岗什卡</b></td><td>11:45 到，距 13:30 停摆渡<b>余 1 小时 45 分</b></td><td>12:38 到，距 13:30 停摆渡<b>只余 52 分钟</b></td></tr>
+    <tr><td><b>最后一天</b></td><td>37.6 km 平路 + 高铁 2 小时，<b>到机场余 2 小时</b></td><td>395 km 山路 + 翻达坂山，<b>到机场余 65 分钟</b></td></tr>
+    <tr><td><b>山路遇阻</b></td><td>Day3 封路走 S302 + G0611 到扁都口，<b>顺路加马蹄寺，Day4 照旧</b></td><td>Day3 的 9 号公路先废，<b>Day4 还要翻达坂山</b></td></tr>
+    <tr><td><b>翻达坂山</b></td><td>Day2 上午 10:40，日头正高</td><td>Day4 傍晚 17:00，<b>天黑加暗冰</b></td></tr>
+    <tr><td><b>取车</b></td><td>西宁，省会车多、四驱好找</td><td>张掖，冬季车源少、价格高一档</td></tr>
+  </table>
+  <div class="call">
+    <b>西宁飞深圳当天只有 20:15 这一班无经停（ZH9236）。</b>错过就是改高铁到兰州或西安、第二天才回得去。所以最后一天不能拿山路去赌——现在这个方向，最后一天是靠高铁收尾的。
+  </div>
+  <p class="lead">反着走的唯一真好处是丹霞能看日落（18:10）。但 11 月太阳角度全天都低，正穿 09:17 进园到 12:17，太阳高度只有 20°–35°，斜射光依然在，色彩不会发闷——这个优势冬天比夏天小得多。为它把 395 km 山路换到最后一天，不值。</p>
+
+  </section>
+  <section class="panel" id="sights" role="tabpanel" aria-label="看点">
+  <h2>路上的看点 <em>历史 · 人文 · 故事</em></h2>
+  <p class="lead">这条线不是新修的景观公路，是几条古道叠在一起：唐蕃古道、丝绸之路南线、河西走廊。下面按天排，看到什么、背后是什么。</p>
+
+  <div class="fig">
+    <svg viewBox="0 0 880 300" role="img" aria-label="河西走廊地形骨架示意：北面是龙首山、合黎山一线的北山，中间是海拔约一千五百米的走廊平原，南面是祁连山。你们的环线是西宁翻达坂山进走廊南缘，经门源、峨堡到祁连县，再走 9 号公路穿过祁连山腹地到肃南、张掖，最后坐高铁穿祁连山隧道回门源、西宁">
+      <path d="M0,58 L0,26 L96,14 L196,30 L300,16 L400,28 L500,14 L604,26 L710,14 L806,26 L880,16 L880,58 Z" fill="#ebe6da"/>
+      <path d="M0,26 L96,14 L196,30 L300,16 L400,28 L500,14 L604,26 L710,14 L806,26 L880,16" fill="none" stroke="#cfc8b8" stroke-width="1.2"/>
+      <rect x="0" y="58" width="880" height="78" fill="#fdfbf6"/>
+      <line x1="0" y1="97" x2="880" y2="97" stroke="#ddd7c9" stroke-width="1" stroke-dasharray="4 6"/>
+      <path d="M0,242 L0,136 L104,152 L206,134 L306,150 L406,132 L506,148 L606,134 L706,150 L806,136 L880,148 L880,242 Z" fill="#dfe4dc"/>
+      <path d="M0,136 L104,152 L206,134 L306,150 L406,132 L506,148 L606,134 L706,150 L806,136 L880,148" fill="none" stroke="#b7bfb1" stroke-width="1.4"/>
+      <rect x="0" y="242" width="880" height="58" fill="#f4f0e7"/>
+      <line x1="0" y1="242" x2="880" y2="242" stroke="#ddd7c9" stroke-width="1"/>
+
+      <text x="700" y="46" text-anchor="middle" font-size="9.5" fill="#7d776d">北山 · 龙首山 / 合黎山 / 马鬃山</text>
+      <text x="40" y="120" font-size="10" fill="#6b6459">河西走廊 · 平均海拔 1500 m</text>
+      <text x="872" y="88" text-anchor="end" font-size="9.5" fill="#8a857e">→ 乌鞘岭 · 兰州</text>
+      <text x="676" y="230" text-anchor="middle" font-size="10" fill="#5d6b5c">祁连山 · 南山 · 主脊 5000 m</text>
+      <text x="40" y="264" font-size="9.5" fill="#8a857e">青藏高原 · 河湟谷地</text>
+
+      <circle cx="100" cy="97" r="2.6" fill="#c3bbaa"/><text x="100" y="86" text-anchor="middle" font-size="9.5" fill="#8a857e">敦煌</text>
+      <circle cx="250" cy="97" r="2.6" fill="#c3bbaa"/><text x="250" y="86" text-anchor="middle" font-size="9.5" fill="#8a857e">酒泉</text>
+      <circle cx="650" cy="97" r="2.6" fill="#c3bbaa"/><text x="650" y="86" text-anchor="middle" font-size="9.5" fill="#8a857e">武威</text>
+      <circle cx="448" cy="124" r="2.4" fill="#c3bbaa"/><text x="444" y="116" text-anchor="end" font-size="9" fill="#8a857e">民乐</text>
+
+      <path d="M470,97 L448,124 L440,158 L424,184" fill="none" stroke="#5f7f6a" stroke-width="1.8" stroke-dasharray="5 4"/>
+      <text x="506" y="136" font-size="9" fill="#5f7f6a">祁连山隧道群</text>
+
+      <path d="M196,272 L272,256 L338,240 L424,184 L392,176 L326,170 L186,196" fill="none" stroke="#b04a22" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M392,176 L352,142" fill="none" stroke="#b04a22" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <path d="M186,196 L214,212 L246,222 L330,230 L412,222 L462,196 L470,168 L470,97" fill="none" stroke="#b04a22" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <polygon points="352,132 344,142 360,142" fill="#8a857e"/>
+      <text x="352" y="124" text-anchor="middle" font-size="9.5" fill="#1c1b19">岗什卡 5254</text>
+
+      <circle cx="470" cy="97" r="4" fill="#b04a22"/><text x="470" y="86" text-anchor="middle" font-size="10.5" font-weight="600" fill="#b04a22">张掖 1480</text>
+      <circle cx="424" cy="184" r="3" fill="#fff" stroke="#b04a22" stroke-width="1.8"/><text x="424" y="174" text-anchor="middle" font-size="10" fill="#1c1b19">门源 2900</text>
+      <circle cx="392" cy="176" r="2.2" fill="#b04a22"/>
+      <circle cx="326" cy="170" r="3" fill="#fff" stroke="#b04a22" stroke-width="1.8"/><text x="322" y="160" text-anchor="middle" font-size="9.5" fill="#1c1b19">峨堡 3500</text>
+      <circle cx="186" cy="196" r="3" fill="#fff" stroke="#b04a22" stroke-width="1.8"/><text x="186" y="186" text-anchor="middle" font-size="10" fill="#1c1b19">祁连县 2800</text>
+      <circle cx="246" cy="222" r="2.4" fill="#b04a22"/><text x="246" y="212" text-anchor="middle" font-size="9" fill="#8a857e">野牛沟</text>
+      <circle cx="470" cy="164" r="3" fill="#fff" stroke="#b04a22" stroke-width="1.8"/><text x="480" y="168" font-size="9.5" fill="#1c1b19">肃南 2300</text>
+      <circle cx="196" cy="272" r="4" fill="#b04a22"/><text x="196" y="290" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">西宁 2200</text>
+      <circle cx="272" cy="256" r="2.2" fill="#b04a22"/><text x="266" y="246" text-anchor="end" font-size="9" fill="#8a857e">大通</text>
+      <circle cx="338" cy="240" r="2.2" fill="#b04a22"/><text x="350" y="252" font-size="9" fill="#8a857e">大坂山 3790</text>
+
+      <line x1="600" y1="272" x2="630" y2="272" stroke="#b04a22" stroke-width="2.2"/>
+      <text x="636" y="275" font-size="9" fill="#8a857e">包车</text>
+      <line x1="680" y1="272" x2="710" y2="272" stroke="#5f7f6a" stroke-width="1.8" stroke-dasharray="5 4"/>
+      <text x="716" y="275" font-size="9" fill="#8a857e">高铁</text>
+      <line x1="760" y1="272" x2="790" y2="272" stroke="#b04a22" stroke-width="1.6" stroke-dasharray="4 4"/>
+      <text x="796" y="275" font-size="9" fill="#8a857e">摆渡</text>
+    </svg>
+    <div class="figcap">河西走廊的地形骨架（示意，不按比例）。南面祁连山、北面北山，中间夹出一条一千多公里长的平地，所以叫走廊。<b>你们四天做的事，就是绕着西段的这条走廊走了一圈</b>：Day2 从南边的西宁翻达坂山进去，Day3 沿走廊南缘贴着山根走，Day4 穿隧道回门源——回西宁那段和 Day2 同一条谷，图里没重复画。</div>
+  </div>
+
+  <h3>Day 2 · 从河湟翻进河西</h3>
+
+  <div class="sight">
+    <div class="sh"><b>达坂山</b><span>3790 m · 10:40 停 10 分钟</span></div>
+    <p>大通河与湟水的分水岭。翻过这道垭口，地理上就从<b>河湟谷地</b>进了<b>河西走廊</b>的地界——一边是黄河水系，一边是内陆河。G227 在这里必须认命地盘上去，这也是为什么九点出发、十点四十才到第一个观景台。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>岗什卡雪峰</b><span>5254 m · 12:25 连心湖</span></div>
+    <p>「岗什卡」是藏语，意思是<b>雪山之巅</b>，冷龙岭主峰。当地华热藏族把它当神山，转山的老人在山脚下能遇到。山下那条七彩瀑布冬天会冻成冰瀑，能不能看到蓝冰要看当年的气温——每年不一样，这也是它值得专程跑一趟的原因。</p>
+    <div class="fig photo">
+      <img src="photos/gangshika-lake-2.jpg" alt="岗什卡连心湖：湖面已结薄冰，岸边堆着被冰推上来的大块碎冰，远处是连绵雪线">
+      <div class="figcap">连心湖的样子。<b>结冰不是一整块，是先冻一片、裂一片，被风推到岸上堆成这些碎冰块</b>——所以走在湖边会有玻璃渣一样的质感，踩上去响。远处那个黑点是游客，站在已经冻实的冰面上。<br><b>11 月初别学他</b>：那会儿冰刚开始冻，厚薄差得厉害，靠岸的地方踩上去可能只有一两厘米。你们 12:25 到、停 35 分钟，够沿着岸边走一段、拍完就走，不用往湖心去。<i style="color:#a9a49c">图：小红书 @书赫 Joy</i></div>
+    </div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>峨堡 · 扁都口</b><span>3500 m · 16:56 停 10 分钟</span></div>
+    <p>峨堡是丝绸之路南线的关隘，被叫作「青海北大门」。往北三十公里就是<b>扁都口，古称大斗拔谷</b>——河西走廊通往青海的千年孔道，从汉代一直用到现在。</p>
+    <p>隋大业五年（609），隋炀帝西巡张掖，走的就是大斗拔谷。《隋书》记这一回：「山路隘险，鱼贯而出，风雪晦冥……士卒冻死者太半。」一千四百年后，你们十一月要走的那条 G227 扁都口段，正是沿着这条古道修的，现在封闭施工到 2027 年 6 月。<b>这条路从来就不好走，不是今年才难。</b></p>
+    <p><b>纪录片第 6 集《丝路》</b>整集就在讲这一趟——裴矩怎么绘《西域图记》，隋炀帝怎么从这条路进张掖，怎么在焉支山会见西域二十七国使者。</p>
+    <div class="fig photo">
+      <img src="photos/ebao-town.jpg" alt="峨堡镇主街：笔直的柏油路两侧灯杆挂满红旗，路尽头是雪线压得很低的祁连山">
+      <div class="figcap">峨堡就一条主街，柏油路笔直对着祁连山，路的尽头直接是雪线。这是十一月的下午——太阳角度低，雪是暖白的，红旗全被风吹向一边。<b>你们 16:56 到，看到的就是这个样子，只是会更暗一点</b>。往北三十公里翻过扁都口，就是甘肃。<i style="color:#a9a49c">图：小红书 @再听一遍花海</i></div>
+    </div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>祁连县城 · 八宝镇</b><span>2800 m · 18:23 入住</span></div>
+    <p>「祁连」是匈奴语，意思是<b>天</b>——祁连山就是「天山」。元狩二年（前 121）霍去病出陇西、过焉支山、深入祁连山，匈奴人丢了这片山之后唱：「失我祁连山，使我六畜不蕃息；失我焉支山，使我妇女无颜色。」</p>
+    <p>这歌唱的就是你们今天翻了一整天的这片山。县城北面是牛心山（4667 m），南面是祁连山主脊，空气干净，晚上抬头有银河。<b>纪录片第 2 集《通道》</b>讲的就是这一年——十九岁的霍去病一年三次出击，把河西走廊整个并入汉朝版图。</p>
+  </div>
+
+  <h3>Day 3 · 9 号公路：祁连山腹地</h3>
+
+  <div class="sight">
+    <div class="sh"><b>郭米村</b><span>距县城 26 km · 09:35 停 15 分钟</span></div>
+    <p>县城出来先沿八宝河走十公里，八宝河在那儿汇进黑河，公路从此一路贴着黑河往上。再走十几公里，第一个像样的村子就是郭米村——<b>它是黑河大峡谷的门户</b>，过村再往前，河谷就收窄、两岸对峙，才算进了峡谷。</p>
+    <p>攻略上它为什么火？三个东西叠在同一个画面里：<b>村舍、河湾、背后带雪的山</b>。夏天还多一层，路边成片野花、坡上是深绿的云杉。所以小红书上那些图，多半是七八月拍的。</p>
+    <p><b>11 月要按另一个版本看：</b>野花没了，草滩转成褐黄，河水的青色更沉——但好处是<b>雪线压到了村子后面</b>，夏天拍不到的「村在烟火里、雪山就在墙后」那种关系，这时候才有。别拿七月的照片当期待，仍然值得停 15 分钟。</p>
+    <p>拍法：村口空地停车（别开进村道，冬天路窄还有冰），往下游方向站，把经幡、村舍、河湾、雪峰压进一张。这一段观景港湾多、免费，看到好角度就停。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>黑河大峡谷</b><span>全天 · 车上</span></div>
+    <p>黑河是<b>中国第二大内陆河</b>，发源祁连山，流过张掖、酒泉，最后注入内蒙古的居延海。《尚书·禹贡》里「导弱水至于合黎，余波入于流沙」——那个「弱水」，一般认为就是今天的黑河。所以「弱水三千，只取一瓢饮」说的水，源头就在这条峡谷里。</p>
+    <p>峡谷最深四百多米，G213 贴着崖壁走。这一段还有<b>野牛沟</b>和<b>祁连鹿场</b>——野牛沟是祁连山腹地的牧业乡，雪豹、白唇鹿的活动区；鹿场是亚洲最大的半野生鹿驯养基地，路边经常能看到鹿群。</p>
+    <div class="fig photo wide">
+      <img src="photos/erga-road-pov.jpg" alt="二尕公路行车视角：两侧成排杨树、右侧波形护栏，正前方是雪山">
+      <img src="photos/erga-road-bend.jpg" alt="二尕公路盘山段俯瞰：公路在大弯处绕过褐色山坡，远处是连片雪山">
+      <div class="figcap">二尕公路（就是 9 号公路）上的两种画面：河谷段两侧是成排杨树、右边一直有波形护栏；盘上去之后回望，能看见整条路在褐色山坡上拐的那道弯。<b>注意这是深秋的样子</b>——草是褐的、杨树还挂着黄叶。<b>你们 11 月 6—9 号来，叶子大概已经落光，草更枯，垭口一带可能已经有积雪</b>；路还是这条路，颜色会素一档。<i style="color:#a9a49c">图：小红书 @草木</i></div>
+    </div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>肃南 · 裕固族</b><span>14:30 路过</span></div>
+    <p>肃南是<b>全国唯一的裕固族自治县</b>。全县裕固族一万多人，却说着三种话：西部裕固语属突厥语族，东部裕固语属蒙古语族，平常还说汉语。族源能追到唐代河西的回鹘，一路迁徙，最后落脚在祁连山北麓。</p>
+    <p>这比任何遗址都更像「活着的丝绸之路」——你们路过的不是布景，是还有人在这里过日子的地方。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>马蹄寺</b><span>仅封路备选 · 12:27 到</span></div>
+    <p>北凉时期开凿，和莫高窟、榆林窟并称<b>河西三大艺术宝窟</b>。三十三天石窟七层二十一窟直接嵌在绝壁上，最窄处要侧身才过得去，阶梯接近 90 度。名字来自传说：天马在此踏下了蹄印。</p>
+    <p>这里还有一层身份：前凉时大儒<b>郭瑀</b>为避中原战乱，隐居临松薤谷凿窟讲学，弟子三百余人——一般认为就在马蹄寺所在的临松山一带。<b>纪录片第 4 集《根脉》</b>讲的就是这批人：中原打得一塌糊涂的时候，儒学在河西存了下来，后来反过来哺育了隋唐。</p>
+  </div>
+
+  <h3>Day 3 傍晚 · 张掖大佛寺</h3>
+
+  <div class="sight">
+    <div class="sh"><b>一座西夏皇家寺院</b><span>¥40 · 16:35 进</span></div>
+    <p>始建于西夏崇宗永安元年（1098），是<b>全国唯一留存的西夏佛教寺院</b>。张掖当时是西夏的甘州，这座寺由皇家供养，所以规格极高。殿内那尊卧佛身长 <b>34.5 米</b>，是全国最大的室内泥塑卧佛。</p>
+    <p>做法很有意思：先用木料搭成十一间的屋架，钉木板做胎，再缠草绳、敷草泥、塑形、贴金，所以叫「木胎中空泥塑」。胎体上留着通风口，腹腔里藏着佛经、铜镜、铜钱，取「心明如镜、肚量如海」的意思。</p>
+    <p>想先有个背景，可以看<b>纪录片第 5 集《造像》</b>——佛教沿这条走廊东传、造像一点点中国化的过程。大佛寺是这条谱系里最晚的一站，也是最世俗的一站。</p>
+  </div>
+
+  <div class="fig photo">
+    <img src="photos/dafo-temple.jpg" alt="张掖大佛寺大佛殿内：卧佛侧卧，面部泥金斑驳露出泥胎，头侧立一尊彩绘侍者像，身下是朱红莲瓣的莲花台，头顶为方格彩绘木构天花板">
+    <div class="figcap">殿里没有射灯，这是眼睛适应几分钟之后才看得清的样子。<b>卧佛脸上那层泥金已经剥得一块一块，露出底下的草泥胎</b>——不是修缮不到位，是这尊像从 1098 年一直躺到现在，中间只大修过那么几次。身下那一圈朱红莲瓣是莲花台，整尊 34.5 米的像就搁在这上面；佛头一侧守着那尊彩塑侍者像，头顶是方格的彩绘木构天花板。<b>门票 ¥40，你们 Day3 傍晚 16:35 进去，17:30 停止入园</b>，来得及。<i style="color:#a9a49c">图：小红书 @猫叔2号</i></div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>降龙罗汉不降龙</b><span>大佛殿北侧</span></div>
+    <p>十八罗汉里有一尊降龙罗汉，手执绳索，<b>却看不到龙</b>。顺着他的目光往上抬——屋梁上盘着一条五爪金龙。</p>
+    <p>因为这是西夏皇家寺院，五爪龙是天子，罗汉降不了天子。这个小心思，是当年塑像的人悄悄留给自己的。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>西游记壁画</b><span>卧佛身后墙 · 4.4 × 2.9 m</span></div>
+    <p>卧佛身后的墙上，一幅残长 4.4 米、高 2.9 米的连环画，画的是唐僧师徒西天取经：「取水子母河」「道昧放心猿」「大战红孩儿」「活人参果树」「路阻火焰山」「大圣闹天宫」十几个场景。壁画距地面 1.55 米，正好跟视线平齐。</p>
+    <p><b>但这幅画里的猪八戒，跟你看惯的那个完全不是一个人。</b></p>
+    <p>壁画里的分工是：<b>猪八戒挑着行李担子，沙僧牵马，孙悟空拄着金箍棒在树丫间打盹</b>。取水子母河那一幕，八戒蹲在河边一手舀水一手回头跟师父说话，唐僧在树下伸手催他，悟空靠着树睡觉。活人参果树那场，八戒抱着树干使劲往上扶，悟空蹲在地上捧土。</p>
+    <p>在吴承恩笔下又懒又馋的那个呆子，在这里是全队最勤恳的一个。当地有个玩笑说法：因为高老庄就在张掖，八戒在丈人家门口得表现得像样点。</p>
+    <p>年代上学界有分歧：主流看法是<b>明末清初</b>，因为画法和明刊本《李卓吾先生批评西游记》的插图高度相似；也有学者依据明代永乐十七年（1419）那次大修，把它推到明早期。</p>
+  </div>
+
+  <div class="fig">
+    <svg viewBox="0 0 880 250" role="img" aria-label="大佛寺卧佛身后墙的立面示意：西游壁画残长 4.4 米、残高 2.9 米，分上下两排共八个场景，画心下沿距地 1.55 米，正好在站立视线高度；壁画前方塑地藏王菩萨像">
+      <rect x="150" y="30" width="540" height="186" fill="#faf6ee"/>
+      <text x="176" y="22" font-size="11" font-weight="600" fill="#1c1b19">卧佛身后墙 · 残长 4.4 m × 残高 2.9 m</text>
+
+      <rect x="176" y="38" width="484" height="116" fill="#f1e7d6" stroke="#b9a184" stroke-width="1.4"/>
+      <line x1="297" y1="38" x2="297" y2="154" stroke="#c9a98e" stroke-width=".9" stroke-dasharray="3 3"/>
+      <line x1="418" y1="38" x2="418" y2="154" stroke="#c9a98e" stroke-width=".9" stroke-dasharray="3 3"/>
+      <line x1="539" y1="38" x2="539" y2="154" stroke="#c9a98e" stroke-width=".9" stroke-dasharray="3 3"/>
+      <line x1="176" y1="96" x2="660" y2="96" stroke="#c9a98e" stroke-width=".9" stroke-dasharray="3 3"/>
+
+      <g font-size="9" fill="#6b4a33" text-anchor="middle">
+        <text x="236" y="70">取水子母河</text>
+        <text x="357" y="70">道昧放心猿</text>
+        <text x="478" y="70">大战红孩儿</text>
+        <text x="599" y="70">活人参果树</text>
+        <text x="236" y="128">路阻火焰山</text>
+        <text x="357" y="128">大圣闹天宫</text>
+        <text x="478" y="128">观音收怪犼</text>
+        <text x="599" y="128">大闹金兜洞</text>
+      </g>
+
+      <line x1="30" y1="216" x2="850" y2="216" stroke="#cfc8ba" stroke-width="1.6"/>
+      <path d="M162,216 L162,154 M156,216 L168,216 M156,154 L168,154" stroke="#b8b0a0" stroke-width="1" fill="none"/>
+      <text x="146" y="190" text-anchor="end" font-size="9.5" fill="#8a857e">距地 1.55 m</text>
+
+      <line x1="690" y1="154" x2="852" y2="154" stroke="#b04a22" stroke-width="1" stroke-dasharray="4 4"/>
+      <text x="852" y="148" text-anchor="end" font-size="9" fill="#b04a22">≈ 站立视线高度</text>
+
+      <path d="M400,216 L400,196 Q400,172 426,172 Q452,172 452,196 L452,216 Z" fill="#ded2c0" stroke="#b9a184" stroke-width="1.2"/>
+      <text x="462" y="204" font-size="9.5" fill="#6b6459">前方塑地藏王像 · 别跨过去</text>
+      <text x="36" y="232" font-size="9" fill="#a39c90">地面</text>
+      <text x="846" y="238" text-anchor="end" font-size="9" fill="#a39c90">殿内壁画共 530 ㎡，这只是其中一面墙</text>
+    </svg>
+    <div class="figcap">这面墙在卧佛背后（立面示意，横向纵向比例不同）。<b>画心下沿距地只有 1.55 m，差不多就是站着平视的高度</b>——进门不用找、不用低头，抬眼就是。八个格子里一格一个故事，其中好几格的主角是猪八戒。</div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>还别错过的三样</b><span>都在殿内及门口</span></div>
+    <p><b>530 平方米壁画</b>：除了西游记，还有《山海经》里的刑天舞干戚、猴子戏鹰。中原神话和佛教故事画在同一间殿里，全国不多见。</p>
+    <p><b>门口两块砖雕</b>：「祇园演法」「西方圣境」，各由 50 块小方砖拼成一幅完整画面，佛像正面镀金。郑振铎当年看到惊叹不已，说这么偏远的地方竟有这般工艺。</p>
+    <p><b>藏经</b>：明正统十年（1445）的官版《大明三藏圣教北藏经》。1930 年代僧人用土坯把藏经殿整个封死，才把这些经卷留到今天。</p>
+    <p><b>看的时候</b>：殿内光线很暗、禁止拍照，进去先站两分钟让眼睛适应，再去看西游壁画那面墙。壁画前塑着地藏王菩萨像，别跨过去。</p>
+  </div>
+
+  <h3>Day 4 · 七彩丹霞与甘州</h3>
+
+  <div class="sight">
+    <div class="sh"><b>七彩丹霞</b><span>09:17 进园 · 3 小时</span></div>
+    <p>一亿年前这里是个大湖。铁、锰这些矿物一层层沉在湖底，氧化程度不同，就有了红、黄、橙、白、灰的条带。后来祁连山隆起把湖底顶上来，风和水再把它切开——你们看到的是<b>一亿年地层被翻开的一页</b>。</p>
+    <p>严格讲，这里主体是「彩色丘陵」，不是地质学意义上的「丹霞」（丹霞指陡崖赤壁）。2020 年它成了世界地质公园。四个台里虹霞台最高、看全景最好。</p>
+  </div>
+
+  <div class="fig photo wide">
+    <img src="photos/danxia-ridges.jpg" alt="张掖七彩丹霞：成片尖顶状的彩色丘陵，岩层呈斜向的红色、赭色、灰白色条带，表面被雨水冲出密集的沟纹">
+    <div class="figcap">就是这一片。<b>注意那些条带是斜的——斜角就是当年湖底被挤压、又被祁连山顶起来的角度。</b>表面那些密密的竖沟是雨水一道一道冲出来的，所以这地貌每年都在变，只是慢到看不出来。<b>四个台走单向环线</b>：云海台 → 仙缘台 → 土林谷 → 虹霞台，虹霞台最高、看全景最好；每台给 25 分钟，体力不够就舍掉土林谷，别硬赶。<b>11 月太阳角度全天都低，你们 09:17 进园时斜射光还在，颜色不会发闷</b>——夏天正午来反而白得发灰。<i style="color:#a9a49c">图：Terry Wu / Wikimedia Commons，CC BY-SA 2.0</i></div>
+  </div>
+
+  <div class="fig">
+    <svg viewBox="0 0 880 210" role="img" aria-label="七彩丹霞成因三阶段示意：一亿年前湖底一层层沉积有色泥沙；祁连山隆起把湖底顶起并弯曲；风和水沿着岩层切开，剩下的就是今天看到的一条条彩色丘陵">
+      <rect x="34" y="46" width="252" height="84" fill="#e6eef1"/>
+      <text x="52" y="66" font-size="9" fill="#6b7f8a">湖水</text>
+      <path d="M34,130 Q70,126 100,130 Q130,134 160,130 Q190,126 220,130 Q250,134 286,130 L286,166 L34,166 Z" fill="#f6efe6"/>
+      <rect x="34" y="132" width="252" height="7" fill="#faf4e8"/>
+      <rect x="34" y="139" width="252" height="7" fill="#c0603c"/>
+      <rect x="34" y="146" width="252" height="7" fill="#e0a05c"/>
+      <rect x="34" y="153" width="252" height="7" fill="#f0d9a8"/>
+      <rect x="34" y="160" width="252" height="6" fill="#cfc6b4"/>
+      <path d="M60,54 L60,80 M60,80 L56,74 M60,80 L64,74" stroke="#8fa6ae" stroke-width="1.2" fill="none"/>
+      <path d="M130,54 L130,80 M130,80 L126,74 M130,80 L134,74" stroke="#8fa6ae" stroke-width="1.2" fill="none"/>
+      <path d="M200,54 L200,80 M200,80 L196,74 M200,80 L204,74" stroke="#8fa6ae" stroke-width="1.2" fill="none"/>
+      <text x="160" y="192" text-anchor="middle" font-size="9.5" fill="#6b6459">① 一亿年前 · 湖底一层层沉下来</text>
+
+      <path d="M360,112 L372,104 L364,104 M372,104 L364,112" stroke="#b8b0a0" stroke-width="1.4" fill="none"/>
+
+      <path d="M314,166 L566,166" stroke="#cfc6b4" stroke-width="1"/>
+      <path d="M314,166 Q440,66 566,166" fill="none" stroke="#faf4e8" stroke-width="8"/>
+      <path d="M314,158 Q440,58 566,158" fill="none" stroke="#f0d9a8" stroke-width="7"/>
+      <path d="M314,150 Q440,50 566,150" fill="none" stroke="#e0a05c" stroke-width="7"/>
+      <path d="M314,142 Q440,42 566,142" fill="none" stroke="#c0603c" stroke-width="7"/>
+      <path d="M314,134 Q440,34 566,134" fill="none" stroke="#f0d9a8" stroke-width="6"/>
+      <path d="M314,166 Q440,66 566,166" fill="none" stroke="#cfc6b4" stroke-width="1"/>
+      <path d="M340,176 L340,196 M340,176 L336,182 M340,176 L344,182" stroke="#b04a22" stroke-width="1.4" fill="none"/>
+      <path d="M540,176 L540,196 M540,176 L536,182 M540,176 L544,182" stroke="#b04a22" stroke-width="1.4" fill="none"/>
+      <text x="440" y="192" text-anchor="middle" font-size="9.5" fill="#6b6459">② 祁连山隆起 · 湖底被顶起来、挤弯</text>
+
+      <path d="M592,112 L604,104 L596,104 M604,104 L596,112" stroke="#b8b0a0" stroke-width="1.4" fill="none"/>
+
+      <defs>
+        <clipPath id="danxiaRidge">
+          <polygon points="594,166 594,118 616,100 640,116 664,88 688,108 712,82 736,104 760,90 784,112 808,96 832,116 846,106 846,166"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#danxiaRidge)">
+        <rect x="590" y="30" width="262" height="140" fill="#f7ede0"/>
+        <line x1="586" y1="186" x2="852" y2="116" stroke="#a9503a" stroke-width="8"/>
+        <line x1="586" y1="174" x2="852" y2="104" stroke="#e8b878" stroke-width="7"/>
+        <line x1="586" y1="162" x2="852" y2="92" stroke="#c0603c" stroke-width="7"/>
+        <line x1="586" y1="150" x2="852" y2="80" stroke="#f3e6d2" stroke-width="6"/>
+        <line x1="586" y1="138" x2="852" y2="68" stroke="#d98f52" stroke-width="7"/>
+        <line x1="586" y1="126" x2="852" y2="56" stroke="#ecd0a0" stroke-width="6"/>
+        <line x1="586" y1="114" x2="852" y2="44" stroke="#b95c3a" stroke-width="7"/>
+        <line x1="586" y1="102" x2="852" y2="32" stroke="#f7f1e4" stroke-width="6"/>
+        <line x1="586" y1="90" x2="852" y2="20" stroke="#e0a05c" stroke-width="7"/>
+      </g>
+      <path d="M594,118 L616,100 L640,116 L664,88 L688,108 L712,82 L736,104 L760,90 L784,112 L808,96 L832,116 L846,106" fill="none" stroke="#b9a184" stroke-width="1" stroke-linejoin="round"/>
+      <line x1="594" y1="166" x2="846" y2="166" stroke="#cfc6b4" stroke-width="1"/>
+      <text x="720" y="192" text-anchor="middle" font-size="9.5" fill="#6b6459">③ 风和水沿岩层切开 · 今天的彩色丘陵</text>
+    </svg>
+    <div class="figcap">三个镜头看同一件事。<b>颜色不是染上去的，是铁、锰这些矿物在湖底沉积时氧化程度不同，一层一层压出来的</b>——所以你们看到的每一条色带，都是一段气候史。斜的那几十度，是祁连山隆起时被挤出来的倾角。</div>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>张国臂掖</b><span>张掖这座城</span></div>
+    <p>汉武帝元鼎六年（前 111）置张掖郡，名字出自《汉书》——<b>「张国臂掖，以通西域」</b>，张开国家的臂膀，一直伸到西域去。河西四郡武威、张掖、酒泉、敦煌，张掖居中，是当时的粮仓和政治中心，所以有「金张掖」的说法。</p>
+    <p>隋大业五年（609），隋炀帝西巡到张掖，在焉支山接见西域二十七国使者，有人管这叫「最早的万国博览会」。同一趟行程，他来的时候穿扁都口冻死了大半士卒，回程还是走那条路。</p>
+    <p><b>甘州市场</b>是本地人自己吃饭的地方：搓鱼面、牛肉小饭、炒炮仗（一种短面条，形似炮仗）、临泽小枣。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>动车上的「雪国列车」</b><span>14:42–16:44 · 不用另外花时间</span></div>
+    <p>张掖西到西宁这段 297 公里，是兰新高铁最特别的一段：<b>它不进兰州，直接从祁连山肚子里穿过去</b>。出张掖西列车就往南爬，从 1480 米的走廊底，半小时爬到 <b>3108 米的山丹马场站</b>——全世界海拔最高的高铁站，站房做成「山」字形，指的是祁连山和焉支山。</p>
+    <p>站台下就是<b>山丹军马场</b>，祁连山北麓的大马营草原，329 万亩，汉代起就是官办马场，今天还是世界上最大、最老的马场之一。小红书上管这段叫「雪国列车」，就是从这儿开始的：<b>11 月草已经枯黄，雪线压到了山根</b>，窗外是褐色的草滩加一道白，一小时的差别就在这半小时里。</p>
+    <div class="fig photo wide">
+      <img src="photos/xueguo-train.jpg" alt="网传「雪国列车」合成图：白烟从远处烟囱升起，雪山横亘，前景是覆雪的农田与村庄">
+      <div class="figcap"><b>先说清楚：这是网上传得最广、也最不靠谱的那一版。</b>两股白烟是从远处工厂的烟囱冒出来的，跟列车没关系，列车是后来贴上去的——你们坐的是电力动车组，本来就不冒烟。放这里纯图个乐，别拿它当预期。真正的那半小时要朴素得多：褐色草滩、一道雪线、零星的村子，<b>但它不是 P 的</b>。<i style="color:#a9a49c">图：网传合成视频截图</i></div>
+    </div>
+    <p>过了马场，列车一头扎进<b>祁连山隧道群</b>——马场到浩门之间连着 7 座隧道，最长的一条 9490 米、轨面海拔 3607 米，是世界海拔最高的高铁隧道，2014 年 5 月 1 日贯通。钻出来就是门源，浩门河谷，2900 米。</p>
+    <p>门源到大通这十几分钟，<b>北侧的窗外就是冷龙岭，主峰岗什卡 5254 米</b>——你们 Day2 花一上午爬上去的那座山。那次人在山里只看到眼前一段，这次在谷底，能看到它完整的轮廓，还不用买摆渡车票。随后列车钻进 15.9 公里的大坂山隧道（全线第一长隧），出来一路下坡进西宁盆地。</p>
+    <p><b>只有两段时间值得盯窗外：</b>前半小时（张掖西→山丹马场，从走廊爬进草原）和约 15:45 前后（门源河谷，列车这一段朝西开，<b>山在北侧，大概就是右手边</b>）。中间大半时间在隧道里，补觉正好。</p>
+  </div>
+
+  <div class="fig">
+    <svg viewBox="0 0 880 250" role="img" aria-label="张掖西到西宁的高铁纵剖面：从张掖 1480 米爬升到山丹马场站 3108 米，中间大马营草原，然后穿过祁连山隧道群（马场到浩门之间 7 座，最长一条 9490 米、轨面 3607 米）下降到门源 2900 米，再穿 15.9 公里的大坂山隧道，一路下坡到西宁 2200 米">
+      <path d="M0,198 L60,197 L120,190 L180,180 L226,172 L280,155 L330,140 L366,132 L400,121 L430,96 L455,58 L470,42 L492,72 L516,112 L540,130 L562,136 L575,139 L610,138 L640,128 L665,112 L690,98 L712,118 L735,142 L760,152 L790,158 L830,166 L880,170 L880,214 L0,214 Z" fill="#f2ede1"/>
+      <path d="M0,198 L60,197 L120,190 L180,180 L226,172 L280,155 L330,140 L366,132 L400,121 L430,96 L455,58 L470,42 L492,72 L516,112 L540,130 L562,136 L575,139 L610,138 L640,128 L665,112 L690,98 L712,118 L735,142 L760,152 L790,158 L830,166 L880,170" fill="none" stroke="#b9b0a0" stroke-width="1.6" stroke-linejoin="round"/>
+
+      <path d="M60,197 L226,172 L280,155 L330,140 L366,132 L390,124" fill="none" stroke="#b04a22" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M390,124 Q460,100 545,133" fill="none" stroke="#b04a22" stroke-width="1.8" stroke-dasharray="5 4"/>
+      <path d="M545,133 L575,139 L612,140" fill="none" stroke="#b04a22" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M612,140 Q657,122 700,110" fill="none" stroke="#b04a22" stroke-width="1.8" stroke-dasharray="5 4"/>
+      <path d="M700,110 L712,118 L735,142 L760,152 L790,158 L830,166" fill="none" stroke="#b04a22" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+
+      <text x="470" y="32" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">岗什卡 5254</text>
+      <text x="428" y="82" text-anchor="middle" font-size="9.5" fill="#7d776d">冷龙岭</text>
+      <text x="690" y="88" text-anchor="middle" font-size="10.5" font-weight="600" fill="#1c1b19">大坂山 3790</text>
+
+      <circle cx="60" cy="197" r="3.5" fill="#b04a22"/>
+      <text x="60" y="212" text-anchor="middle" font-size="10" font-weight="600" fill="#1c1b19">张掖西 1480</text>
+      <circle cx="226" cy="172" r="2.5" fill="#b04a22"/>
+      <text x="226" y="187" text-anchor="middle" font-size="9" fill="#8a857e">民乐</text>
+      <circle cx="366" cy="132" r="3.5" fill="#b04a22"/>
+      <text x="366" y="148" text-anchor="middle" font-size="10" font-weight="600" fill="#1c1b19">山丹马场 3108</text>
+      <circle cx="575" cy="139" r="3.5" fill="#b04a22"/>
+      <text x="575" y="155" text-anchor="middle" font-size="10" font-weight="600" fill="#1c1b19">门源 2900</text>
+      <circle cx="830" cy="166" r="3.5" fill="#b04a22"/>
+      <text x="830" y="181" text-anchor="middle" font-size="10" font-weight="600" fill="#1c1b19">西宁 2200</text>
+
+      <text x="292" y="126" text-anchor="middle" font-size="9" fill="#6b6459">大马营草原</text>
+      <text x="500" y="172" text-anchor="middle" font-size="9" fill="#6b6459">祁连山隧道群 · 7 座 · 最长 9490 m</text>
+      <text x="690" y="158" text-anchor="middle" font-size="9" fill="#6b6459">大坂山隧道 15.9 km</text>
+
+      <rect x="60" y="218" width="306" height="5" rx="2.5" fill="#eec6ae"/>
+      <text x="213" y="238" text-anchor="middle" font-size="9.5" fill="#b04a22">① 张掖西 → 山丹马场 · 约 30 分钟</text>
+      <rect x="545" y="218" width="107" height="5" rx="2.5" fill="#eec6ae"/>
+      <text x="598" y="238" text-anchor="middle" font-size="9.5" fill="#b04a22">② 门源河谷 · 约 12 分钟</text>
+    </svg>
+    <div class="figcap">张掖西到西宁的高铁剖面（示意：横向按里程、纵向按海拔压缩）。<b>两段开阔、两段隧道</b>——从走廊爬进草原那半小时，和门源河谷那十几分钟，是全程唯二能好好看窗外的时间；中间那 7 座隧道直接从祁连山主脊底下穿过去。</div>
+  </div>
+
+  <h3>配一部纪录片 ·《河西走廊》</h3>
+  <p class="lead">央视 2015 年的十集纪录片，每集 50 分钟，豆瓣 9.7。这趟路跟它重合度极高——<b>你们不是去看河西走廊，是走在它的取景地里</b>。行前挑几集看，路上每个点的来历都能对上号。</p>
+  <table>
+    <tr><th style="width:132px">你们会经过</th><th style="width:126px">看第几集</th><th>对得上什么</th></tr>
+    <tr><td><b>峨堡 · 扁都口</b></td><td><b>第 6 集《丝路》</b></td><td>609 年隋炀帝从大斗拔谷穿进张掖，沿途风雪冻毙士卒；裴矩绘《西域图记》</td></tr>
+    <tr><td><b>张掖</b></td><td><b>第 6 集《丝路》</b></td><td>那场会见西域二十七国的盟会，就开在张掖</td></tr>
+    <tr><td><b>祁连山 · 祁连县</b></td><td><b>第 2 集《通道》</b></td><td>前 121 年十九岁的霍去病一年三击匈奴，打通河西走廊</td></tr>
+    <tr><td><b>马蹄寺</b><span class="hint">（封路才去）</span></td><td><b>第 4 集《根脉》</b></td><td>大儒郭瑀隐居临松薤谷凿窟讲学，弟子三百——一般认为就在今天马蹄寺所在的临松山一带</td></tr>
+    <tr><td><b>大佛寺</b></td><td><b>第 5 集《造像》</b></td><td>昙无谶、鸠摩罗什、昙曜开启的造像中国化，大佛寺是这条谱系最晚的一站</td></tr>
+    <tr><td><b>肃南 · 裕固族</b></td><td><b>第 8 集《会盟》</b></td><td>关联较弱：会盟讲的是蒙藏，裕固族源是回鹘，没有直接对应。但对看能懂河西为什么一直是个多民族混居的走廊</td></tr>
+  </table>
+  <div class="call">
+    <b>只看一集，看第 6 集《丝路》。</b>你们要走的扁都口就是那一集的主场——609 年那支西巡队伍走的路线，和你们 Day2 傍晚、Day3 早上走的，是同一条谷。看完再站到峨堡古城边上，感觉完全不一样。<br><b>有耐心就看四集：2、4、5、6。</b>《通道》给祁连山，《根脉》给马蹄寺，《造像》给大佛寺，《丝路》给扁都口和张掖。四集看完，这趟线上每个大点的来历都对上了。<br>第 3 集《驿站》讲的是悬泉置（在敦煌，不在你们线上），第 7 集《敦煌》和这趟无关，<b>留给下次走大环线</b>。第 9 集《苍生》、第 10 集《宝藏》讲嘉峪关和新中国工业，也可以先跳过。
+  </div>
+
+  <h2>地名都是怎么来的 <em>一路读下来的密码</em></h2>
+  <p class="lead">这条线上的名字一层压一层：匈奴语、汉语、藏语、蒙古语叠在同一条谷里。张掖、武威、酒泉、敦煌这四个是汉武帝起的，<b>用了两千一百多年</b>——中间它们也轮流被叫过甘州、凉州、肃州、沙州，但本名一直没丢，这种连续性在全国都少见。</p>
+
+  <table>
+    <tr><th style="width:104px">地名</th><th style="width:172px">什么意思</th><th>谁起的 / 什么来历</th></tr>
+    <tr><td><b>张掖</b></td><td>张国臂掖，以通西域</td><td>汉武帝元鼎六年（前 111）。「张开国家的手臂，一直伸到西域去」——不是夸富庶，是一个军事动作</td></tr>
+    <tr><td><b>武威</b></td><td>武功军威</td><td>前 121 年霍去病打完匈奴，用军威命名。跟张掖同年设郡</td></tr>
+    <tr><td><b>酒泉</b></td><td>城下有泉，其水若酒</td><td>应劭注《汉书》的说法。民间版本更有名：霍去病把御赐的酒倒进泉里，跟士卒一起喝</td></tr>
+    <tr><td><b>敦煌</b></td><td>敦，大也；煌，盛也</td><td>河西四郡最西端。名字起得最大，位置也最远</td></tr>
+    <tr><td><b>祁连</b></td><td>天</td><td>匈奴语。《汉书》：「匈奴呼天为祁连」。祁连山＝天山，和新疆的天山是同一个意思</td></tr>
+    <tr><td><b>焉支</b></td><td>阏氏（单于的正妻）</td><td>匈奴语。传说山上产红蓝花、可制胭脂，所以又叫胭脂山——传说，别当史实</td></tr>
+    <tr><td><b>山丹</b></td><td>删丹</td><td>焉支山又名删丹山，北魏置县时用山名；后来写讹成「山丹」</td></tr>
+    <tr><td><b>甘州</b></td><td>—</td><td>西魏时张掖改称甘州。西夏在此设甘肃军司——<b>「甘肃」的「甘」就是张掖，「肃」是酒泉</b>。省名是这两个州拼出来的</td></tr>
+    <tr><td><b>西宁</b></td><td>西陲安宁</td><td>北宋崇宁三年（1104）宋军收复此地，改鄯州为西宁州。之前它叫过西平、鄯州、青唐城</td></tr>
+    <tr><td><b>门源</b></td><td>浩亹之源</td><td>浩门河古称浩亹水，旧县名写作「亹源」，1959 年简化成门源</td></tr>
+    <tr><td><b>大通</b></td><td>大通河</td><td>河名做地名。大通河和浩门河是同一条河，上下游两个叫法</td></tr>
+    <tr><td><b>达坂 / 大坂</b></td><td>山口</td><td>蒙古语。青海写达坂山、甘肃写大坂山，指的是同一道梁，G227 从中间翻过去</td></tr>
+    <tr><td><b>峨堡</b></td><td>敖包</td><td>蒙古语「obo」，石堆祭坛。古称<b>察汗峨博</b>，意思是白色的敖包——是敖包，不是城堡的堡</td></tr>
+    <tr><td><b>肃南</b></td><td>肃州之南</td><td>「肃」来自酒泉（肃州），因位于肃州以南得名。1954 年设裕固族自治县</td></tr>
+    <tr><td><b>扁都口</b></td><td>大斗拔谷</td><td>古名。《隋书》里写的就是这三个字，隋炀帝是从这条谷走进张掖的</td></tr>
+  </table>
+
+  <div class="call">
+    <b>最值得记的一条：甘肃的「甘」是张掖。</b>西夏在甘州设甘肃军司，元代设甘肃行省、治所也在甘州——<b>张掖当过省级行政中心</b>。今天它只是个地级市，很多人以为甘肃的省名来自兰州，其实跟兰州没关系。
+  </div>
+
+  <h3>张掖：故事比敦煌还多 <em>为什么</em></h3>
+  <p class="lead">你说得对，张掖的故事密度确实比敦煌高。原因很简单：<b>敦煌是门户，张掖是指挥部</b>。门户负责迎来送往、留下壁画和经卷；指挥部负责驻军、屯田、谈判、平叛、割据——权力斗争比信仰热闹得多，故事自然也多。</p>
+
+  <div class="sight">
+    <div class="sh"><b>「金张掖」是怎么来的</b><span>河西四郡 · 居中</span></div>
+    <p>河西四郡一字排开：武威、张掖、酒泉、敦煌。张掖居中，脚下是黑河冲出来的最大一片绿洲，水足、地肥、产粮多。<b>古代在没有铁路的年代，能产粮的地方就是中心</b>，所以有「金张掖、银武威」的说法，不是文人的夸张，是粮仓排名。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>没有霍去病，就没有「张掖」这两个字</b><span>前 121 年</span></div>
+    <p>元狩二年，十九岁的霍去病两次出陇西，过焉支山千余里，把匈奴从这条走廊上打出去。匈奴人唱：「失我焉支山，使我妇女无颜色；失我祁连山，使我六畜不蕃息。」——这首歌你们 Day2 走的那片山就是原唱现场。</p>
+    <p>地打下来，第二年才轮得到起名字。武威、酒泉在前 121 年设，张掖、敦煌在前 111 年分置。<b>先有刀，后有名字，最后才有丝路</b>——顺序别搞反。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>唯一一个西巡到河西的皇帝</b><span>609 年 · 隋炀帝</span></div>
+    <p>大业五年，隋炀帝从长安出发，穿祁连山、走大斗拔谷进张掖，在焉支山下会见西域二十七国使者。使团里带着裴矩编的《西域图记》——一本把西域各国的山川、道路、物产、王公相貌全画下来的情报手册。</p>
+    <p>《隋书》记他进谷那一段：「山路隘险，鱼贯而出，风雪晦冥……士卒冻死者太半。」<b>一千四百年后你们走的那条谷，就是这条。</b></p>
+    <p>这趟来回走了大半年，是中国历史上皇帝到过最西的地方之一。后来的皇帝再没有第二个走到这里。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>西夏的皇家寺院、元代的省会、明代的边关</b><span>1098 · 1280s · 1370s</span></div>
+    <p>1098 年西夏在甘州建大佛寺，因为这里是西夏的陪都级重镇；元代设甘肃行省，治所就在甘州；明代划九边，甘肃镇的总兵也驻甘州。<b>从西夏到明，五百多年里这一带的政治军事中心一直在张掖，不在兰州</b>——兰州上位是清朝以后的事，因为它是通往新疆和青海的交通咽喉。</p>
+    <p>所以张掖城里留下的东西，气质跟敦煌完全不一样：敦煌是洞窟和经卷，张掖是城、是寺、是衙门、是粮仓。大佛寺那个 34.5 米的卧佛和那面西游记壁画，就是这种「皇家出钱、按最高规格办」的产物。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>西宁为什么叫西宁</b><span>1104 年 · 宋</span></div>
+    <p>西宁这个名字出现得很晚。汉代这里叫西平，唐代叫鄯州，吐蕃占了两百多年，唃厮啰政权把都城建在这，叫<b>青唐城</b>——那是西宁历史上最风光的一段，丝绸之路南线和唐蕃古道在这里交汇，胡商云集。</p>
+    <p>1104 年宋军打回来，改名「西宁州」，取「西陲安宁」。<b>这个名字本身就是一句军事口号</b>，跟张掖的「张国臂掖」是一个套路的命名法。所以西宁城里的古迹不多，它不是靠文物立身的城市，是靠位置——青藏高原的东大门，谁控制这里谁就掐住进出西藏的咽喉。</p>
+  </div>
+
+  <h2>这片地是怎么长出来的 <em>五种地貌，一个动作</em></h2>
+  <p class="lead">四天里你们会看到五种完全不同的地貌：雪山、草原、峡谷、平原、彩色丘陵。看着不相干，其实是同一个动作的连锁反应——<b>印度板块撞上来，祁连山被顶起来，走廊被压下去</b>。</p>
+
+  <div class="sight">
+    <div class="sh"><b>一、山是被挤出来的</b><span>祁连山 · 5000 万年前开始</span></div>
+    <p>印度板块撞上欧亚板块，应力传到两千公里外的这里，祁连山在新生代快速抬升，成了青藏高原的东北边缘。<b>它今天还在长</b>——2022 年 1 月门源 6.9 级地震、1927 年古浪 8 级地震，都是这座山还在动的证据。你们 Day2 翻的达坂山、Day3 走的 9 号公路，走的都是这种「还在长」的山。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>二、走廊是被压下去的</b><span>张掖 · 海拔 1500</span></div>
+    <p>祁连山北麓是一条大断裂，山这边往上升，断裂另一侧往下掉，形成一条一千多公里长、几十公里宽的沉降带。北边还有一排矮山（龙首山、合黎山、马鬃山）挡着，于是南北两山夹一条平地——这就是河西走廊。<b>走廊不是「一条路」，是一个地质构造</b>，路只是后来修在它上面的。</p>
+    <p>所以 Day2 那天你们做的事在地质上很夸张：一天之内从 2200 米的河湟谷地爬到 3790 米的垭口，再落回 2800 米的祁连县城，跨了三个高度带。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>三、峡谷是河切出来的</b><span>黑河大峡谷 · Day3 全天</span></div>
+    <p>黑河发源祁连山，一路向北切穿山脉，切出四百多米深的峡谷——就是你们 Day3 走的那条 G213。<b>山一直在长，河一直在切</b>，谁快谁说了算：山长得快，河就切得深；河切得快，山就被削低。祁连山北坡这些峡谷，是这场拉锯战正在进行的现场。</p>
+    <p>黑河最后的归宿是内蒙古的居延海，<b>它不流向任何海洋</b>，所以叫内陆河，也是中国第二大内陆河。河西走廊所有的绿洲、所有的城，都靠这种不出口的河养着。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>四、冰川是固体的水库</b><span>岗什卡 · Day2 上午</span></div>
+    <p>祁连山有约两千条现代冰川。夏天冰雪融化补给河流，冬天重新积累——<b>等于一个国家级的储水池</b>，河西走廊的农业全靠它调峰。11 月冰川不化，河最瘦，这也是为什么这个季节的河谷看着有点「干」。</p>
+    <p>你们在岗什卡看到的那条七彩瀑布，就是冰川融水在岩壁上冻成的冰瀑。它每年样子都不一样，取决于当年夏天气温有多高、冬天来得有多早——<b>同一个景点，没有两年的照片是一样的</b>。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>五、彩色丘陵是一亿年的湖底</b><span>七彩丹霞 · Day4 上午</span></div>
+    <p>一亿年前张掖是个大湖。铁、锰这些矿物一层层沉在湖底，氧化程度不同，颜色就不同；后来祁连山隆起把湖底顶起来、挤斜，风和水再把它竖着切开——<b>你们看到的是被翻开的一页地层</b>。所以那些色带是斜的，斜角就是当年被挤压的角度。</p>
+    <p>严格讲这里主体是「彩色丘陵」，不是地质学意义上的丹霞（丹霞指陡崖赤壁，标准地在广东丹霞山）。2020 年它成了世界地质公园，牌子挂的是「张掖丹霞」，名字和学术定义不完全是一回事。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>六、11 月还有一件事在发生</b><span>冻融 · 全线路面</span></div>
+    <p>高原上白天气温升到零上、夜里掉到零下十几度，土里的水反复冻了化、化了冻。这个过程会把地表拱出一个个小鼓包（冻胀丘），也会让路面白天返浆、夜里结一层薄冰。<b>这就是为什么司机早上要慢、为什么你们 9 点出发反而更安全</b>——太早出发，路面正好是最滑的时候。</p>
+  </div>
+
+  <div class="call">
+    <b>一句话记住这趟线在看什么：</b>不是看几个景点，是看一条<b>正在生长的山脉</b>和它脚下被压出来的<b>一条走廊</b>。雪山、草原、峡谷、绿洲、彩色丘陵，全是这两件事的副产品。
+  </div>
+
+  </section>
+  <section class="panel" id="logistics" role="tabpanel" aria-label="后勤">
+  <h2>吃什么 <em>西宁吃羊 · 祁连吃草原 · 张掖吃面</em></h2>
+  <p class="lead">这条线的吃可以一句话概括：<b>西宁吃羊，祁连吃草原，张掖吃面</b>。三家各有各的招牌，别在景区门口随便解决——景区门口的馆子，一年只做四个月生意，不用回头客。</p>
+
+  <h3>西宁 · 落地第一顿，和最后一顿</h3>
+  <div class="sight">
+    <div class="sh"><b>手抓羊肉</b><span>人均 60–90 · 按斤称</span></div>
+    <p>青海的羊多是藏系羊，在冷水的草场上放养，膻味比内地的羊轻很多。<b>只用清水煮，出锅撒盐</b>，蘸椒盐或蒜泥。本地人吃手抓讲究「肋条」「羊脖」两个部位，肋条肥瘦相间，羊脖最嫩。点之前先问价，按斤称重。</p>
+  </div>
+  <div class="sight">
+    <div class="sh"><b>酿皮、甜醅、尕面片</b><span>街边小店 · 便宜</span></div>
+    <p><b>酿皮</b>是洗面洗出来的面筋加皮，浇辣油、蒜水、醋，凉的，五块八块一份；<b>甜醅</b>是莜麦或青稞发酵，微酸带一点酒味，冰镇着喝；<b>尕面片</b>是拇指盖大的面片下羊肉汤，一进门就能闻到味。这三样是西宁人自己天天吃的，不是给游客准备的。</p>
+    <p><b>羊肠面</b>要单独说一句：一碗面配一段灌了面糊的羊肠，是本地人的早饭。<b>第一次吃建议先要半份</b>，不是所有人都能接受。</p>
+  </div>
+  <div class="sight">
+    <div class="sh"><b>去哪儿吃</b><span>莫家街 · 下南关街</span></div>
+    <p>莫家街是给游客的，热闹、方便、不便宜，Day1 晚上十点到那儿正好；<b>想吃本地口味就去下南关街</b>，一条街全是清真馆子，手抓、面食、烤肉都有。兴海路一带的手抓店也集中。</p>
+    <p><b>礼节一条：</b>清真餐厅不要带外面的非清真食物进去，也不要在店里喝酒。这条在西宁、祁连、张掖都适用，别当成小事。</p>
+  </div>
+
+  <h3>祁连 · 草原上的两样东西</h3>
+  <div class="sight">
+    <div class="sh"><b>祁连黄蘑菇</b><span>鲜的只有 8–9 月</span></div>
+    <p>祁连的黄蘑菇长在海拔三千米的草原上，跟松茸一样靠菌丝和草根共生。<b>11 月没有鲜的</b>，馆子里写「黄蘑菇炖鸡」多半是干货泡发的——点之前问一句「是鲜的还是泡的」，问清楚了再决定要不要点，价钱差得远。</p>
+  </div>
+  <div class="sight">
+    <div class="sh"><b>牦牛酸奶、炕锅羊肉</b><span>八宝镇街上</span></div>
+    <p>牦牛奶做的酸奶表面结一层黄皮，撒白糖吃，酸得很直接；<b>炕锅</b>是青海的做法：羊肉、土豆、洋葱在铁锅里干煸，最后拌面片。海拔 2800 米，<b>晚上别吃太饱</b>，吃撑了睡觉容易头疼——这是高原上的常识，不是矫情。</p>
+  </div>
+
+  <h3>张掖 · 面食的主场</h3>
+  <div class="sight">
+    <div class="sh"><b>搓鱼面、牛肉小饭、炒炮仗</b><span>甘州市场 · 十几块一份</span></div>
+    <p><b>搓鱼面</b>是手掌搓出来的两头尖的面鱼，拌卤或者炒；<b>牛肉小饭</b>是把面切成米粒大的丁下牛肉汤——<b>不是米饭，外地人十个有八个点错</b>；<b>炒炮仗</b>是短面条形似炮仗，爆炒，油大、下饭。三样都是本地人的日常，甘州市场里随便一家都不差。</p>
+  </div>
+  <div class="sight">
+    <div class="sh"><b>鸡肉垫卷子、羊肉粉皮面筋</b><span>坐下来吃的那种</span></div>
+    <p><b>鸡肉垫卷子</b>是河西的席面菜：整鸡炖汤，汤上铺一层死面卷子蒸熟，卷子吸饱鸡汤；<b>羊肉粉皮面筋</b>是张掖小吃，酸辣口，凉吃热吃都行。前者适合八个人点一份分，后者适合一个人端着碗在街边吃。</p>
+    <p>另外两样带走：<b>临泽小枣</b>（张掖临泽产，肉厚核小）和<b>山丹羊肉</b>（甘肃有名的羊肉产区，跟青海的羊不是一个路子）。</p>
+  </div>
+
+  <h3>路上 · Day2 的干粮</h3>
+  <div class="sight">
+    <div class="sh"><b>这天的午饭要提前一天买</b><span>西宁 · Day1 晚上</span></div>
+    <p>Day2 从 9 点开到 18 点 23，全程没有正经吃午饭的时间——这是行程里唯一硬扛的一天。<b>Day1 晚上在莫家街买好</b>：馍或青稞饼、牦牛肉干、巧克力、坚果，再加两个保温杯装热水（8 个人至少两只大壶）。</p>
+    <p>高原上吃饭的规矩是<b>少量多次</b>：空腹容易高反，吃撑了也容易高反。车上备垃圾袋，牧区路段没有垃圾桶。</p>
+  </div>
+
+  <div class="call">
+    <b>四个坑，提前说：</b>① 景区门口卖的「牦牛肉干」多半是黄牛冒充，去超市买有包装、有产地的；② 手抓按斤称，先问价再点，别等结账；③ 11 月很多农牧家乐已经歇业，别指望路边随便停车就有饭吃，饭点要按计划走；④ 张掖的「小饭」是面丁不是米饭，点单时说清楚。
+  </div>
+
+  <h2>自己开，还是包车 <em>这件事跟驾驶技术无关</em></h2>
+  <p class="lead">团里没人有冰雪驾驶经验，「我学一下、慢慢开」听起来是解法，实际不是。先看气温，再看三条跟驾驶技术无关的硬约束，最后算一遍账。</p>
+
+  <table>
+    <tr><th style="width:40%">地点</th><th class="num" style="width:30%">白天</th><th class="num" style="width:30%">夜间</th></tr>
+    <tr><td>西宁<span class="hint"> · 2200 m</span></td><td class="num">13–15 ℃</td><td class="num">−1 ~ −3 ℃</td></tr>
+    <tr><td>门源<span class="hint"> · 2900 m</span></td><td class="num">10–13 ℃</td><td class="num">−1 ~ −5 ℃</td></tr>
+    <tr><td>祁连县城<span class="hint"> · 2800 m</span></td><td class="num">8–15 ℃</td><td class="num">−4 ~ −8 ℃</td></tr>
+  </table>
+  <p class="lead">这是 10 月底实测的预报。到 11/6 出发还要再降 3–5 ℃，<b>夜里 −6 ~ −12 ℃</b>。白天大部分路面是干的或湿的，<b>不是全程冰面</b>——但背阴弯道、桥面、隧道口、涵洞顶这四处，白天也结着冰。所以真正的问题不是「路滑不滑」，是<b>「有 20–30% 的路段是暗冰，而你不知道是哪一段」</b>。</p>
+
+  <div class="sight">
+    <div class="sh"><b>为什么「慢慢开」不是解法</b><span>三条，都不是态度问题</span></div>
+    <p><b>一、暗冰上失去附着是瞬间的，跟速度关系不大。</b>桥面上你开到 20 也一样滑。能不能提前半秒松油门、不打方向、不踩刹车，靠的是「这条路冬天长什么样」的肌肉记忆——团里没人有。</p>
+    <p><b>二、更现实的风险是被追尾，不是你自己滑出去。</b>G227、G213 上本地车按 60–80 跑，你按 30 开在盲弯里，被追尾的概率比你自己失控高得多。慢，在这个环境里是另一种危险。</p>
+    <p><b>三、高原会削判断力。</b>3790 m 上反应慢 0.3 秒，60 km/h 就是多冲 5 米。这不是意志问题，是生理问题，练不出来。</p>
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>三条硬约束，跟开车技术无关</b><span>一条都绕不过去</span></div>
+    <p><b>座位和驾照。</b>C1 只能开 ≤9 座。9 座车坐 8 个人，行李舱只剩 3–4 个箱位，<b>你们 8 件托运行李根本装不下</b>。要 12 座就得 B1 以上——等于雇司机。自驾唯一的解是开两辆车，也就是<b>两个司机同时在 3790 m 上处理暗冰</b>。</p>
+    <p><b>异地还车。</b>西宁取、张掖还，冬季异地还车费 800–2000 元，不少公司在青海冬季干脆不支持异地还。</p>
+    <p><b>保险与责任。</b>租车的车上人员险普遍 1–5 万/座；包车有营运资质和承运人责任险。<b>8 个人一辆车，出事是公司团建的责任问题</b>，不是私人自驾。</p>
+  </div>
+
+  <table>
+    <tr><th>方案</th><th>明细</th><th class="num" style="width:126px">8 人合计</th></tr>
+    <tr><td><b>包车 9 座</b><br><span class="hint">2.5 天，含油费过路</span></td><td>8 人 8 件行李装不下，实际要升 12 座，价格高一档</td><td class="num">约 ¥2,500 起</td></tr>
+    <tr><td><b>自驾两辆四驱 SUV</b></td><td>车租 400–600/天 × 2 辆 × 3 天 + 油费 700 + 异地还车 800–2,000 + 防滑链拖车绳 300</td><td class="num">¥4,100–6,700</td></tr>
+  </table>
+  <p class="lead">结论很反直觉：<b>自己开更贵</b>，而且多出两个新手司机和一条公司担责的风险。包车 8 个人摊下来每人 300–500 元。</p>
+
+  <div class="call">
+    <b>结论：包车。</b>不是因为不会开，是因为座位、驾照、异地还车、保险这四件事自己开一件都绕不过去，算下来还更贵。<br><b>如果「不方便」指的是不自由，那是对条款不满意，不是对包车不满意。</b>把这几条写进合同就不别扭了：出发时间我们定、想停就停、<b>停留时长不另计费</b>、不进购物点、司机餐宿已含。另外指定<b>跑过 9 号公路的本地司机</b>，别要平台派单的。8 个人坐 12 座，空位放行李和器材，比两辆 SUV 挤着舒服。
+  </div>
+
+  <div class="sight">
+    <div class="sh"><b>如果还是想自己开</b><span>只有一个方案账上说得通</span></div>
+    <p><b>只自驾 Day4：张掖市区 → 七彩丹霞 → 张掖西站。</b>37.6 km，海拔 1480–1800，全程一级公路，没有山路。山路那三天照旧包车——Day4 恰好是全程最不需要司机、也唯一在平原上的一天。</p>
+    <p>至于 Day2、Day3 自己开，不建议，但门槛摆在这里，你们自己判断：<b>两辆四驱 + 两套防滑链 + 行前在张掖找空地练 2 小时冰面刹车 + 绝不走夜路 + 出发前 3 天看预报（有降雪就直接放弃）</b>。少一条都不成立。</p>
+  </div>
+
+  <h2>预算 <em>按 8 人估</em></h2>
+  <table>
+    <tr><th>项目</th><th class="num" style="width:140px">金额</th></tr>
+    <tr><td>机票（深圳往返西宁，¥1200 起 × 8）</td><td class="num">约 ¥9,600</td></tr>
+    <tr><td>包车 2.5 天（含油费过路）<br><span class="hint">按 9 座估；8 人 8 件托运行李建议改 12 座，车费会高一档，需另问</span></td><td class="num">约 ¥2,500</td></tr>
+    <tr><td>住宿 3 晚（西宁 / 祁连 / 张掖，4 间）</td><td class="num">约 ¥3,300</td></tr>
+    <tr><td>门票（岗什卡摆渡车 25 + 丹霞 108 + 大佛寺 40）× 8<br><span class="hint">大佛寺为可选，不去省 ¥320</span></td><td class="num">约 ¥1,384</td></tr>
+    <tr><td>张掖 → 西宁动车（¥91.5 × 8）</td><td class="num">约 ¥732</td></tr>
+    <tr><td>餐饮 4 天</td><td class="num">约 ¥3,800</td></tr>
+    <tr><td>机动 / 保险 / 零食</td><td class="num">约 ¥600</td></tr>
+    <tr class="sum"><td>合计</td><td class="num">约 ¥21,900</td></tr>
+    <tr class="sum"><td>人均</td><td class="num">约 ¥2,740</td></tr>
+  </table>
+  <table>
+    <tr><th>只在这两种情况下发生</th><th class="num" style="width:140px">金额</th></tr>
+    <tr><td>马蹄寺门票 ¥87 × 8<br><span class="hint">仅 Day3 封路备选启用时；不走则省</span></td><td class="num">约 +¥696</td></tr>
+    <tr><td>封路后不飞张掖、改门源住宿（4 间）<br><span class="hint">仅 9 号公路与扁门高速同时管制时</span></td><td class="num">约 +¥600</td></tr>
+  </table>
+  <div class="call">机票按 ¥1200 计，实际以出票为准。淡季祁连县城四星 ¥239–348/间、三星 ¥127 起，比门源贵一档（门源 ¥127–222）；张掖市区连锁 200–300 元/间。包车通常不含司机食宿（约 100–150 元/天）。Day3 单日 236.9 km 在常规日均 300–400 km 以内，不加收超里程费。</div>
+
+  </section>
+  <section class="panel" id="prep" role="tabpanel" aria-label="准备">
+  <h2>穿什么、带什么</h2>
+  <table>
+    <tr><th style="width:88px">类别</th><th>清单</th></tr>
+    <tr><td><b>上身</b></td><td>速干打底 + 抓绒 + 厚羽绒 / 冲锋衣（垭口 3700 m 以上，风大体感低 8℃）</td></tr>
+    <tr><td><b>下身</b></td><td>加绒裤 + 防风外层。不要穿牛仔裤，湿了不干</td></tr>
+    <tr><td><b>脚</b></td><td>防滑徒步鞋（连心湖到七彩瀑布是碎石栈道，有霜；丹霞栈道也滑）</td></tr>
+    <tr><td><b>配件</b></td><td>帽子、手套、围巾、墨镜、高倍防晒、唇膏</td></tr>
+    <tr><td><b>药品</b></td><td>晕车药（9 号公路弯多）、感冒药、小瓶氧气（可选）</td></tr>
+    <tr><td><b>电子</b></td><td>充电宝（低温掉电快）、车充、离线地图、手电</td></tr>
+    <tr><td><b>食物</b></td><td>保温杯（灌满热水）、面包 / 巧克力 / 坚果 / 卤味。<b>Day2 山上和 Day3 车上各一顿饭都要自带</b>——岗什卡山上没有补给，9 号公路 151 km 没有饭馆</td></tr>
+  </table>
+
+  <h2>五个必须知道的风险</h2>
+  <table>
+    <tr><th style="width:120px">风险</th><th>具体情况</th></tr>
+    <tr><td><b>暗冰</b></td><td><b>最大的风险，不是冷。</b>二尕公路与达坂山背阴路段白天化、夜里冻，看着是湿路面，其实是一层黑冰。<b>Day2 傍晚峨堡 → 祁连（S302 峨祁公路）是全程唯一一段擦黑的行车</b>，这一段的冰最要命。白天翻的<b>景阳岭垭口 3767 m</b>（门源—峨堡之间）是另一个老堵点：一下雪就打滑堵车，央视和人民网都报过。刹车提前 3 倍距离，下坡用低挡，不空挡滑行</td></tr>
+    <tr><td><b>封路</b></td><td>达坂山、G213 二尕公路都可能临时管制。<b>祁连到张掖的小客车只有两条通道：G213 二尕公路，或 S302 峨堡 + G0611 扁门高速</b>。两条同时断就只能退回门源——出发前一晚和当天早上各查一次，按「如遇封路」那节决策</td></tr>
+    <tr><td><b>天黑得早</b></td><td>19:00 前基本全黑。所有行程按「17:30 前离开山路」倒排，绝不赶夜路</td></tr>
+    <tr><td><b>高反</b></td><td>西宁 2200 m、达坂山 3790 m、连心湖 3700 m、祁连 2800 m。<b>主计划不再上 4000 m</b>：白天最高 3700 m 只待 1 小时 50 分，夜里睡 2800 m，压力大幅下降。垭口停留控制在 15 分钟内，不跑不跳，不洗头不喝酒，出发前一周开始吃红景天。<b>若临时决定上 4123 观峰台，按 4000 m 以上准备</b>——往返 4.5 km，走 10 分钟歇 2 分钟</td></tr>
+    <tr><td><b>景区淡季时间</b></td><td>岗什卡 13:30 停止摆渡车上山、18:00 停运；丹霞 08:00 开园；大佛寺 17:30 停止入园；<b>马蹄寺 16:30 停止入园</b>（仅封路备选用）。这几条任一变化，当天时间轴都要重算</td></tr>
+  </table>
+
+  <h2>现在就要办的七件事</h2>
+  <table>
+    <tr><th style="width:30px" class="num">#</th><th>事项</th></tr>
+    <tr><td class="num">1</td><td><b>出机票</b>：11/6 ZH9235 深圳 16:00 → 西宁 19:30；11/9 ZH9236 西宁 20:15 → 深圳 23:30</td></tr>
+    <tr><td class="num">2</td><td><b>订动车</b>：11/9 张掖西 14:42 D2674 → 西宁 16:44，8 张。不要买 16:25 那班</td></tr>
+    <tr><td class="num">3</td><td><b>定包车</b>：2.5 天（Day2 / Day3 全天、Day4 半天），确认四驱 + 雪地胎 + 常年跑这条线的本地司机。<br><b>车型这一条最容易漏：8 人加 8 件托运行李，9 座车的后备箱基本装不下。</b>要么订 12 座（人少一排放行李），要么确认车顶行李架，要么全队压到 20 寸箱 + 背包。别到机场才发现塞不进去。<br>合同写明三件事：<b>Day2 约 395.5 km、9:00–18:30</b>（接近日均 400 km 上限）；<b>Day3 约 237 km</b>；<b>封路改走 S302 峨堡 + G0611 扁门高速（约 251 km）不加价</b>——这条要写进去，因为绕行比原路多 14 km 且走高速有通行费</td></tr>
+    <tr><td class="num">4</td><td><b>订住宿</b>：西宁 1 晚（11/6）、<b>祁连</b> 1 晚（11/7）、张掖 1 晚（11/8），4 间双床，都选带暖气。<br><b>祁连</b>（海拔 2800 m，供氧酒店比门源多）：祁连宾馆（四星，八宝西路 103 号，0970-7675666，¥345，雪山房带地暖+弥散氧气）、鼎瑞假日（四星，八宝西路 41 号，0970-8688881，¥239，房内制氧机）、吉缘饭店（四星，广场西路 8 号，0970-8685678，¥348）；预算紧选祁铭大厦（三星，人民路南 29 号，0970-5942666，¥127）。<br><b>张掖那家订在民主西街 / 大佛寺巷一带</b>——Day3 傍晚 16:35 步行 5 分钟去大佛寺，全靠这个位置；封路那天从马蹄寺 16:30 到酒店，同样靠它</td></tr>
+    <tr><td class="num">5</td><td><b>线上买票</b>：岗什卡摆渡车 ¥25、七彩丹霞 ¥108，各 8 张，现场只刷身份证。<b>大佛寺 ¥40 和马蹄寺 ¥87 都是可选项，当天现场买</b>——去不去取决于 Day3 走哪条路，不用提前订</td></tr>
+    <tr><td class="num">6</td><td><b>买干粮 + 保险</b>：11/6 晚在西宁超市买好 Day2 山上、Day3 车上的两顿（面包、巧克力、坚果、卤味）；保险买含高原 / 自驾意外的，8 人一起</td></tr>
+    <tr><td class="num">7</td><td><b>发群公告</b>：每天 09:00 发车（不是 8 点）；<b>Day2 不吃正餐午饭、不去 4123 观峰台，18:40 前必须到祁连</b>；Day3 08:30 加满油、带上午饭，9 号公路慢慢走；<b>Day3 傍晚 16:35 大佛寺自愿参加，17:30 停止入园</b>；<b>若 Day3 早上 9 号公路封了改走扁都口，当天多一个马蹄寺（16:30 停止入园），照常 18:00 在张掖吃饭</b>；每段设硬截止时间，到点就走</td></tr>
+  </table>
+
+  <div class="call">
+    <b>出发前一周打四个电话：</b>岗什卡票务确认<b>摆渡车首末班</b>（13:30 停止上山、18:00 停运是否仍有效）；大佛寺确认<b>淡季闭园时间</b>（主流口径 08:30–18:00、17:30 停止入园，另有资料写 09:00–17:00，这一小时决定 Day3 傍晚那 55 分钟能不能进）；<b>祁连 / 肃南公路段</b>确认 11 月 9 号公路通行状况与结冰段；<b>12328 或「高速V服」小程序</b>确认 <b>G0611 峨堡收费站</b>和扁门高速景阳岭隧道是否管制——这是封路备选的命门，10 月里就临时封过一次。
+  </div>
+
+  </section>
+  <div class="ft">
+    距离与车程为腾讯地图驾车规划实测值，实际以包车司机路线为准<br>
+    日出日落为 2026 年 11 月当地预报值 · 景区开放时间、票价、摆渡车班次以出行前官方发布为准<br>
+    天气与路况存在不确定性，出发前请再次确认
+  </div>
+
+</div>
+
+<noscript><style>.panel{display:block!important}.tabs{display:none}</style></noscript>
+
+<script>
+(function(){
+  var tabs = [].slice.call(document.querySelectorAll('.tabs button'));
+  var panels = [].slice.call(document.querySelectorAll('.panel'));
+  var bar = document.querySelector('.tabs');
+  function barY(){
+    return Math.round(bar.getBoundingClientRect().top + window.pageYOffset);
+  }
+  function show(id, opts){
+    opts = opts || {};
+    var hit = tabs.filter(function(b){ return b.dataset.panel === id; })[0];
+    if(!hit){ return show(tabs[0].dataset.panel, opts); }
+    tabs.forEach(function(b){ b.setAttribute('aria-selected', b.dataset.panel === id ? 'true' : 'false'); });
+    panels.forEach(function(p){ p.classList.toggle('on', p.id === id); });
+    if(opts.write && history.replaceState){ history.replaceState(null, '', '#' + id); }
+    if(opts.scroll){ window.scrollTo(0, barY()); }
+  }
+  tabs.forEach(function(b){
+    b.addEventListener('click', function(){ show(b.dataset.panel, {write:true, scroll:true}); });
+  });
+  var fromHash = (location.hash || '').replace('#', '');
+  show(fromHash || tabs[0].dataset.panel, {scroll: !!fromHash});
+  window.addEventListener('hashchange', function(){
+    var id = (location.hash || '').replace('#', '');
+    if (id) { show(id, {scroll:true}); }
+  });
+})();
+</script>
+</body>
+</html>
